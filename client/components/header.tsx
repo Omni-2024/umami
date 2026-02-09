@@ -1,5 +1,12 @@
 import React from 'react';
 
+const navItems = [
+  { label: "HOME", href: "/" },
+  { label: "PLATFORM", href: "/platform" },
+  { label: "PIPELINE", href: "/pipeline" },
+  { label: "PEOPLE", href: "/people" },
+];
+
 const Navbar: React.FC = () => {
   return (
     <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-18 py-4 font-sans z-50">

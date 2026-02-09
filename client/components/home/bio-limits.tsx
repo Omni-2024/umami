@@ -2,7 +2,7 @@ import React from "react"
 
 const StatsSection: React.FC = () => {
   return (
-    <section className="relative py-28 px-20 bg-gradient-to-b from-transparent to-[#F4FAFF] z-10">
+    <section className="relative py-28 px-20  z-10">
 
       <div className="max-w-5xl mx-auto text-center mb-16">
         <h2 className="text-[44px] md:text-5xl mb-4">

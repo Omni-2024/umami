@@ -29,8 +29,8 @@ const BiologicalBottleneckSection: React.FC = () => {
   };
 
   return (
-    <section className="relative pb-28 px-20 bg-white z-10">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+    <section className="relative py-28 px-20 bg-white z-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         {/* LEFT IMAGE */}
         <div className="w-full flex justify-center md:justify-start">
           <Image
@@ -44,7 +44,7 @@ const BiologicalBottleneckSection: React.FC = () => {
 
         {/* RIGHT CONTENT */}
         <div className="flex flex-col gap-8">
-          <h2 className="text-[44px] md:text-[44px] font-semibold leading-tight">
+          <h2 className="text-[44px] md:text-[44px] leading-tight">
             Understanding the{" "}
             <span className="text-[#D4AF37] font-italic">
               Biological Bottleneck
