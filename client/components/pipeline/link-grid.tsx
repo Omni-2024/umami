@@ -10,9 +10,9 @@ export default function PipelineSelector({
   onChange,
 }: SelectorProps) {
   return (
-    <section className="bg-white py-10">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-wrap justify-center gap-x-14 gap-y-6">
+    <section className="relative pb-4 pt-28 px-20 bg-white z-10">
+      <div className="mx-auto max-w-8xl px-2">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
           {items.map((item) => {
             const active = item.key === activeKey
 
@@ -20,7 +20,7 @@ export default function PipelineSelector({
               <button
                 key={item.key}
                 onClick={() => onChange(item.key)}
-                className="relative text-xs tracking-[0.25em] uppercase font-medium transition-colors w-[calc(33.33%-3.5rem)] text-center"
+                className="relative text-[10px] tracking-[0.25em] uppercase font-medium transition-colors w-[calc(33.33%-3.5rem)] text-center"
               >
                 <span
                   className={active ? "text-gray-900" : "text-gray-400 hover:text-gray-700"}
@@ -32,7 +32,7 @@ export default function PipelineSelector({
                 {active && (
                   <span
                     className="absolute left-1/2 -bottom-2 h-[2px] bg-[#D4AF37] rounded-full transition-all duration-300"
-                    style={{ width: '100%', transform: 'translateX(-50%)' }}
+                    style={{ width: '70%', transform: 'translateX(-50%)' }}
                   />
                 )}
               </button>
