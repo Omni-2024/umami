@@ -20,7 +20,7 @@ export default function PipelineContent({ data }: { data: PipelineItem }) {
   }, [data])
 
   return (
-    <section className="relative py-28 px-20 bg-white z-10">
+    <section className="relative pb-28 px-20 bg-white z-10">
       <div
         className={`mx-auto grid max-w-5xl gap-12 items-center md:grid-cols-2
         transition-all duration-500 ease-out

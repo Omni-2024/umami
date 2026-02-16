@@ -20,7 +20,7 @@ export default function HeroVideo({
       {/* Background video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
-        src={videoSrc}
+        src={"/pipeline/hero.mp4"}
         autoPlay
         muted
         loop
@@ -28,26 +28,26 @@ export default function HeroVideo({
       />
 
       {/* 5% blur overlay */}
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px]" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
         <div className="max-w-5xl text-white">
           {eyebrow && (
-            <p className="mb-4 text-xs tracking-widest uppercase opacity-80">
+            <p className=" text-xs tracking-widest uppercase opacity-80 -mt-30">
               {eyebrow}
             </p>
           )}
 
-          <h2 className="text-[44px] md:text-[64px] mb-4">
+          <h2 className="text-[44px] md:text-[64px]">
           From the Ocean
           <br />
-          <span className="text-[#D4AF37] font-italic">
+          <span className="font-italic">
             Without the Catch
           </span>
         </h2>
 
-          <p className="mt-10 max-w-sm mx-auto text-[18px] opacity-50 font-medium leading-relaxed">
+          <p className="max-w-sm mx-auto text-[18px] opacity-50 font-medium leading-relaxed">
           We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty.
         </p>
         </div>

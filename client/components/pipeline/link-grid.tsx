@@ -10,9 +10,9 @@ export default function PipelineSelector({
   onChange,
 }: SelectorProps) {
   return (
-    <section className="relative pb-4 pt-28 px-20 bg-white z-10">
+    <section className="relative pb-14 pt-68 px-20 bg-white z-10 rounded-t-[100%] rounded-b-0 -mt-47">
       <div className="mx-auto max-w-8xl px-2">
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-6 -mt-30">
           {items.map((item) => {
             const active = item.key === activeKey
 
