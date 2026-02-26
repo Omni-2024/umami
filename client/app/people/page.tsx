@@ -6,6 +6,8 @@ import BiologicalBottleneckSection from "@/components/home/bio-bottleneck";
 import PartnerMarquee from "@/components/home/partners";
 import SpotlightSection from "@/components/home/spotlight";
 import CTA from "@/components/home/cta";
+import ScienceImpactGrid from "@/components/people/science-impact";
+import TeamSection from "@/components/people/team";
 
 const UmamiLanding: React.FC = () => {
   return (
@@ -16,10 +18,8 @@ const UmamiLanding: React.FC = () => {
       <HeroSection />
       <RightGlow />
 
-      <StatsSection />
-      <BiologicalBottleneckSection/>
-      <PartnerMarquee/>
-      <SpotlightSection/>
+      <ScienceImpactGrid />
+      <TeamSection/>
       <CTA/>
 
     </div>
