@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="w-full p-6">
       {/* Main Container with Gradient and Rounded Corners */}
-      <div className="bg-gradient-to-r from-[#E3F0FF] via-[#E9F3F1] to-[#FFF9D6] rounded-[40px] p-12 text-[#111F33] font-sans">
+      <div className="bg-gradient-to-r from-[#CCEFF4] to-[#0095C8] rounded-[40px] p-12 text-[#111F33] font-sans">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           
@@ -24,13 +24,13 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Newsletter Input */}
-            <div className="relative w-full max-w-xs">
+            <div className="relative w-full max-w-xs border-neon rounded-full">
               <input 
                 type="email" 
                 placeholder="ENTER EMAIL" 
                 className="w-full py-4 px-6 rounded-full bg-white/50 border border-white/20 text-[10px] tracking-widest placeholder:text-[#111F33]/60 focus:outline-none shadow-sm"
               />
-              <button className="absolute right-1 top-1 bottom-1 px-6 bg-[#111F33] text-white rounded-full text-[10px] font-bold tracking-widest hover:bg-[#1a2e4d] transition-colors">
+              <button className="absolute right-1 top-1 bottom-1 px-6 bg-[#111F33] text-white rounded-full text-[10px] font-bold tracking-widest hover:bg-red-400 transition-colors border-neon-cta">
                 SUBMIT
               </button>
             </div>
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-6 border-t border-[#111F33]/20 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-widest uppercase opacity-70">
+        <div className="mt-16 pt-6 border-t border-[#03045E]/50 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-widest uppercase opacity-70">
           <span>Site by Maven Creative</span>
           <span>Copyright ©2026 Umami All Rights Reserved</span>
           <span className="cursor-pointer">Privacy Policy</span>
