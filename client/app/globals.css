@@ -149,26 +149,30 @@
 *{
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
-  color: #0F172A;
+  color: #03045E;
 }
 .font-italic {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
   font-optical-sizing: auto;
-  color: #D4AF37;
+  color: #CD5A99;
 }
 .para-style{
   font-size: 16px;
   color: #0F172A;
 }
 .notfish{
-  background-color: #0F172A;
+  background-color: #0095C8;
   color: white;
 }
 .fish{
-  background-color: #D4AF37;
-  color: #0F172A;
+  background: linear-gradient(
+    to left,
+    #CD5A99,
+    #0095C8
+  );
+  color: white;
 }
 .grayfish{
   background-color: #C7CDDC;
@@ -177,4 +181,13 @@
 .ghost {
   font-family: "Playfair Display", serif;
   font-style: italic;
+}
+.border-neon {
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, rgba(205, 90, 153, 0.5), rgba(0, 149, 200, 0.5)) border-box;
+}
+.pcolor{
+  color: #033E8A;
 }

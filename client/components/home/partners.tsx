@@ -12,7 +12,7 @@ const PartnerMarquee: React.FC = () => {
   return (
     <section className="relative py-28 bg-white z-10">
       {/* Heading */}
-      <div className="max-w-5xl mx-auto mb-16 text-center">
+      <div className="md:max-w-5xl mx-auto mb-16 text-center">
         <h2 className="text-[44px] md:text-5xl">
           Our Trusted <br />
           <span className="font-italic">Partners</span>

@@ -21,7 +21,7 @@ const SpotlightSection: React.FC = () => {
 
   return (
     <section className="relative py-28 px-20 z-10 bg-[#E3F2FD]">
-      <div className="max-w-5xl mx-auto">
+      <div className="md:max-w-5xl mx-auto">
         
         {/* Header Section */}
         <div className="flex justify-between items-end mb-16">

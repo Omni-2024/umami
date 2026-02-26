@@ -4,7 +4,7 @@ import React from "react";
 const CTA: React.FC = () => {
   return (
     <section className="relative py-28 px-20 bg-white z-10">
-      <div className="max-w-5xl mx-auto bg-[#EBF5FF] rounded-[40px] py-20 px-12 text-center">
+      <div className="md:max-w-5xl mx-auto bg-[#EBF5FF] rounded-[40px] py-20 px-12 text-center">
         <h2 className="text-[44px] md:text-5xl leading-tight mb-12">
           Ready to build the future
           <br />
