@@ -23,15 +23,15 @@ export default function IsometricCardStack() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="relative relative z-10 max-w-5xl mx-auto px-6 -mt-10 pt-0 pb-32 flex items-center justify-center p-8 overflow-hidden">
-      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div className="relative relative z-10 flex items-center justify-center overflow-hidden bg-[#E5F7F9] py-10">
+      <div className="max-w-5xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12">
         
         {/* --- LEFT SIDE: 3D STACKED CARDS --- */}
         <div 
-          className="relative flex-1 flex items-center justify-center mt-70"
+          className="relative flex-1 flex items-center justify-center mt-90"
           style={{ 
             perspective: "3600px", 
-            height: "600px",
+            height: "300px",
             width: "100%" 
           }}
         >
@@ -99,7 +99,7 @@ export default function IsometricCardStack() {
         <div className="flex-1 max-w-xl text-left space-y-6 -mt-20">
           <h2 className="text-[44px] md:text-[44px] leading-tight">
             A Computational{" "}
-            <span className="text-[#D4AF37] font-italic">
+            <span className=" font-italic">
                Representation of Living
             </span>
             {" "}Marine Cells
