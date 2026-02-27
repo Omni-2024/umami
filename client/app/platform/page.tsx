@@ -3,6 +3,7 @@ import CellBackground from "@/components/platform/cells"
 import HeroOverlay from "@/components/platform/hero"
 import WhyPossibleSection from "@/components/platform/why"
 import RightGlow from "@/components/platform/seam-flow"
+import IsometricCardStack from "@/components/platform/stack-cards"
 
 const platform: React.FC = () => {
   return (
@@ -12,9 +13,7 @@ const platform: React.FC = () => {
       <RightGlow />
 
       <WhyPossibleSection />
-      <WhyPossibleSection />
-      <WhyPossibleSection />
-      <WhyPossibleSection />
+      <IsometricCardStack />
       </div>
   )
 }
