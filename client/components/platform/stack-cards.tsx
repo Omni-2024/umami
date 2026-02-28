@@ -13,9 +13,20 @@ const layers = [
   { label: "OMICS | TEENOMICS", size: "250GB", color: "rgba(24, 28, 58, 0.9)", shadow: "rgba(10, 10, 30, 0.5)" },
 ];
 
-const FlaskIcon = ({ color }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5">
-    <path d="M9 3h6M10 9h4M10 3v10.37a4 4 0 1 0 4 0V3M8.5 17.5h7" strokeLinecap="round" strokeLinejoin="round"/>
+const FlaskIcon = ({ color }: { color: string }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    strokeWidth="1.5"
+  >
+    <path
+      d="M9 3h6M10 9h4M10 3v10.37a4 4 0 1 0 4 0V3M8.5 17.5h7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 
-// ── Icons (Simplified for brevity, maintain originals in your codebase) ──────────────────
+// Icons ──────────────────
 const DnaIcon = () => (
   <svg width="32" height="32" viewBox="0 0 36 36" fill="none" stroke="#1a3a6a" strokeWidth="1.4" strokeLinecap="round">
     <path d="M12 4 C12 4 24 10 24 18 C24 26 12 32 12 32" />
@@ -65,7 +65,7 @@ const RationalIcon = () => (
   </svg>
 );
 
-// ── Pill strip ──────────────────
+// Pill strip ──────────────────
 interface PillItem {
   icon: React.ReactNode;
   text: string;
@@ -73,7 +73,7 @@ interface PillItem {
 
 const PillStrip = ({ items, delay = 0 }: { items: PillItem[]; delay?: number }) => (
   <div
-    className="flex items-center justify-center gap-1 rounded-full bg-[#CCEFF4] px-2 py-4 backdrop-blur-md border border-white/40 shadow-sm"
+    className="flex items-center justify-center gap-1 rounded-full bg-[#CCEFF4] px-2 py-4 "
     style={{ animation: `fadeSlideUp 0.7s ease ${delay}ms both` }}
   >
     {items.map((item, i) => (
@@ -91,7 +91,30 @@ const PillStrip = ({ items, delay = 0 }: { items: PillItem[]; delay?: number }) 
   </div>
 );
 
-// ── Main component ──────────────────
+// ── HUGE Double Chevron ARROW Component ──
+const HugeDoubleChevronArrow = () => (
+  <svg width="120" height="80" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/2000/svg">
+    {/* Upper Chevron - Semi-transparent */}
+    <path 
+      d="M10 10 L30 25 L50 10" 
+      stroke="#d65a8a" 
+      strokeWidth="7" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+      opacity="0.5"
+    />
+    {/* Lower Chevron - Solid */}
+    <path 
+      d="M10 20 L30 35 L50 20" 
+      stroke="#d65a8a" 
+      strokeWidth="7" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+// Main component ──────────────────
 export default function MechanisticEngine() {
   const topItems: PillItem[] = [
     { icon: <DnaIcon />, text: "80% Gene Coverage" },
@@ -109,22 +132,18 @@ export default function MechanisticEngine() {
 
   return (
     <>
-      {/* ── Keyframes (Define slow spinning here or in tailwind.config.js) ── */}
       <style>{`
         @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeSlideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
         @keyframes subtleFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
-        @keyframes chevronDrop { 0%, 100% { opacity: 0.2; transform: translateY(0px); } 50% { opacity: 0.8; transform: translateY(5px); } }
-        
-        /* Smooth, slow rotation */
-        @keyframes slow-spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
+        @keyframes chevronPulse { 0%, 100% { opacity: 0.3; transform: translateY(0px); } 50% { opacity: 0.9; transform: translateY(5px); } }
+        @keyframes slow-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        .chevron { animation: chevronDrop 1.8s ease-in-out infinite; }
+        /* Smooth pulsing animation applied to the huge arrow */
+        .animate-chevronPulse { 
+          animation: chevronPulse 1.8s ease-in-out infinite; 
+        }
         
-        /* Apply the custom animation */
         .animate-slow-spin {
           animation: slow-spin 20s linear infinite;
         }
@@ -136,50 +155,38 @@ export default function MechanisticEngine() {
           {/* ── LEFT: The Diagram ── */}
           <div className="flex flex-col items-center flex-shrink-0 w-full max-w-[480px]">
             <div className="border-neon rounded-full p-1">
-            <PillStrip items={topItems} delay={100} />
+              <PillStrip items={topItems} delay={100} />
             </div>
-            {/* Arrows Down */}
-            <div className="flex gap-10 my-2">
-              {[0, 0.2, 0.4].map((d, i) => (
-                <div key={i} className="chevron" style={{ animationDelay: `${d}s` }}>
-                  <svg width="40" height="24" viewBox="0 0 44 28" fill="none">
-                    <path d="M6 4 L22 22 L38 4" stroke="#d2648c" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" opacity={0.6 - i * 0.15}/>
-                  </svg>
-                </div>
-              ))}
+
+            {/* Top HUGE Arrow - Centered */}
+            <div className="animate-chevronPulse z-20">
+              <HugeDoubleChevronArrow />
             </div>
 
             {/* Cell Container: Floating */}
-            <div className="relative flex items-center justify-center animate-[subtleFloat_5s_ease-in-out_infinite] w-[380px] h-[350px] rounded-[60px] bg-white/40 backdrop-blur-xl shadow-2xl border border-white/60 overflow-hidden">
-              
-              {/* ── Rotating Background Image ── */}
+            <div className="relative flex items-center justify-center animate-[subtleFloat_5s_ease-in-out_infinite] w-[380px] h-[350px] rounded-[60px] bg-[#C7CDDC] overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center animate-slow-spin">
                 <img 
                   src="/platform/rotate-cell.png" 
                   alt="Rotating data visualization"
-                  className="w-[280px] h-[280px] object-contain opacity-40" // Adjust size/opacity to balance
+                  className="w-[280px] h-[280px] object-contain opacity-40" 
                 />
               </div>
             </div>
 
-            {/* Arrows Down */}
-            <div className="flex gap-10 my-2">
-              {[0, 0.2, 0.4].map((d, i) => (
-                <div key={i} className="chevron" style={{ animationDelay: `${d}s` }}>
-                  <svg width="40" height="24" viewBox="0 0 44 28" fill="none">
-                    <path d="M6 4 L22 22 L38 4" stroke="#d2648c" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" opacity={0.6 - i * 0.15}/>
-                  </svg>
-                </div>
-              ))}
+            {/* Bottom HUGE Arrow - Centered */}
+            <div className="-mt-7 my-2 animate-chevronPulse z-20">
+              <HugeDoubleChevronArrow />
             </div>
+
             <div className="border-neon rounded-full p-1"> 
-                <PillStrip items={bottomItems} delay={300} />
+              <PillStrip items={bottomItems} delay={300} />
             </div> 
           </div>
 
-          {/* ── RIGHT: Text Content (Balanced) ── */}
+          {/* ── RIGHT: Text Content ── */}
           <div className="flex flex-col gap-6 w-full max-w-[420px] text-center md:text-left animate-[fadeSlideIn_0.8s_ease_both] delay-500">
-            <h2 className="text-[44px] md:text-[44px] leading-tight">
+            <h2 className="text-[44px] md:text-[44px] leading-tight text-[#1a2e5a]">
               A Mechanistic Engine <br />
               <span className="font-italic">for Marine Biology</span>
             </h2>
@@ -191,6 +198,6 @@ export default function MechanisticEngine() {
 
         </div>
       </section>
-    </>
+    </    >
   );
 }
