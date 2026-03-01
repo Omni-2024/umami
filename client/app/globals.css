@@ -186,7 +186,7 @@
   border: 3px solid transparent;
   background: 
     linear-gradient(white, white) padding-box,
-    linear-gradient(90deg, rgba(205, 90, 153, 0.5), rgba(0, 149, 200, 0.5)) border-box;
+    linear-gradient(90deg, rgba(0, 149, 200, 0.5), rgba(205, 90, 153, 0.5)) border-box;
 }
 .pcolor{
   color: #033E8A;
@@ -195,5 +195,5 @@
   border: 3px solid transparent;
   background: 
     linear-gradient(#E5F7F9, #E5F7F9) padding-box,
-    linear-gradient(90deg, rgba(205, 90, 153, 0.5), rgba(0, 149, 200, 0.5)) border-box;
+    linear-gradient(90deg,  rgba(0, 149, 200, 0.5), rgba(205, 90, 153, 0.5)) border-box;
 }

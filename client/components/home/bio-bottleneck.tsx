@@ -51,20 +51,20 @@ const BiologicalBottleneckSection: React.FC = () => {
             </span>
           </h2>
 
-          <p className="text-[16px] opacity-50 font-medium leading-relaxed">
+          <p className="text-[16px] !text-[#033E8A] font-medium leading-relaxed">
             Our proprietary ALKEMYST™ platform combines multi-omics, predictive
             modeling, and digital twins with advanced marine cell cultivation.
           </p>
 
           {/* ACCORDION */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 ">
             {accordionData.map((item, index) => (
               <div
                 key={index}
                 className={`rounded-lg overflow-hidden transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-[#FFFFFF] border border-[#9898A8]"
-                    : "bg-[#F0F0F0] border-none backdrop-blur-0"
+                    ? "bg-[#FFFFFF] border-neon !rounded-3xl"
+                    : "bg-[#E4FBFF] border-none backdrop-blur-0"
                 }`}
               >
                 <button
@@ -85,9 +85,9 @@ const BiologicalBottleneckSection: React.FC = () => {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="px-4 text-[14px] text-gray-700 overflow-hidden"
+                      className="px-4 text-[14px] overflow-hidden"
                     >
-                      <div className="py-3">{item.content}</div>
+                      <div className="py-3  !text-[#033E8A]">{item.content}</div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -96,7 +96,7 @@ const BiologicalBottleneckSection: React.FC = () => {
           </div>
 
           {/* CTA BUTTON */}
-          <button className="mt-6 notfish px-8 py-4 rounded-full text-[13px] font-bold tracking-wide hover:bg-[#1a2e4d] transition-colors">
+          <button className="mt-6 fish px-8 py-4 rounded-full text-[13px] font-bold tracking-wide hover:bg-[#1a2e4d] transition-colors">
             EXPLORE THE ALKEMYST™ PLATFORM
           </button>
         </div>

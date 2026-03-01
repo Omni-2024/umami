@@ -20,7 +20,7 @@ const PartnerMarquee: React.FC = () => {
       </div>
 
       {/* Marquee Wrapper */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden py-10">
         {/* Track */}
         <div className="flex w-max animate-marquee gap-32 items-center">
           {/* First set */}

@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
 
         {/* Logo */}
         <div className="cursor-pointer">
-          <img src="/home/Blue.png" alt="Logo" className="w-24 md:w-30" />
+          <img src="/logo-b.png" alt="Logo" className="w-24 md:w-30" />
         </div>
 
         {/* Desktop Menu */}
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
 
-          <button className="notfish px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.1em]">
+          <button className="bg-[#03045E] !text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.1em]">
             PARTNER WITH US
           </button>
         </div>

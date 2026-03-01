@@ -40,11 +40,11 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 w-full md:max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 mt-10">
+      <div className="relative z-10 w-full md:max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-20 md:mr-20">
         <div className="flex flex-col gap-6 md:max-w-4xl">
 
-          <div className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.25em] uppercase opacity-70">
-            <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+          <div className="hidden md:flex bg-[#E0F5F8] w-120 !text-[#394353] rounded-full text-center items-center gap-2 text-[10px] font-bold tracking-[0.25em] uppercase border-white border-2">
+            <span className="w-2 h-3 text-center rounded-full" />
             AI-Driven Discovery | Marine Biotechnology Solutions
           </div>
 
@@ -64,9 +64,7 @@ const HeroSection: React.FC = () => {
           </h1>
 
           <p className="para-style">
-            Umami Bioworks is an AI-driven biotechnology company modeling marine
-            biology at the cellular level to power next-generation solutions
-            across food, health, and nutrition.
+            Umami Bioworks is an AI-driven biotechnology company modeling marine biology at the cellular level to power next-generation solutions across food, health, and nutrition. Our platform connects Digital Cell Models to real-world outcomes that are faster, more predictable, and sustainably scalable. 
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-8 md:mt-12">

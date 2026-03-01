@@ -14,7 +14,7 @@ const StatsSection: React.FC = () => {
           </span>
         </h2>
 
-        <p className="mt-8 md:mt-10 max-w-3xl mx-auto text-[16px] md:text-[18px] opacity-50 font-medium leading-relaxed">
+        <p className="mt-8 md:mt-10 max-w-3xl mx-auto text-[16px] md:text-[18px] opacity-80 !text-[#033E8A] font-medium leading-relaxed">
           Fish biology is uniquely complex, adaptive, and powerful and produces
           compounds critical to human health. Yet, without deep biological
           understanding, demand and supply remain fundamentally misaligned.
@@ -26,15 +26,15 @@ const StatsSection: React.FC = () => {
         {[
           {
             value: "90%",
-            text: "Fish stocks are overfished, and wild fisheries are maxed out. Global stocks are being depleted at rates that prevent natural recovery, threatening marine biodiversity."
+            text: "Fish stocks are overfished, and wild fisheries are maxed out. Global stocks are being depleted at all the rates that prevent natural recovery, threatening marine biodiversity."
           },
           {
             value: "50m",
-            text: "Tonne supply gap predicted in the next 10 years despite advancements in aquaculture. Traditional farming methods are failing to keep pace with demand."
+            text: "Tonne supply gap predicted in the next 10 years advancements in aquaculture.  Diminishing returns in traditional farming methods are failing to keep pace with soaring global consumption. "
           },
           {
             value: "30%",
-            text: "Defective supply per batch due to systemic inefficiency. Biological variability and environmental stress drive massive inconsistencies."
+            text: "Defective supply per batch due to systemic inefficiency. Biological variability, disease, and environmental stress drive massive inconsistencies in existing supply."
           }
         ].map((item, index) => (
           <div
@@ -56,7 +56,7 @@ const StatsSection: React.FC = () => {
               {item.value}
             </h3>
 
-            <p className="text-[14px] md:text-[15px] opacity-70 leading-relaxed">
+            <p className="text-[14px] md:text-[15px] !text-[#033E8A] leading-relaxed">
               {item.text}
             </p>
           </div>
