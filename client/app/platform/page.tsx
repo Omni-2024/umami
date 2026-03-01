@@ -6,6 +6,7 @@ import RightGlow from "@/components/platform/seam-flow"
 import IsometricCardStack from "@/components/platform/stack-cards"
 import MarineComputationalComponent from "@/components/platform/round-cells"
 import MechanisticEngine from "@/components/platform/input-output"
+import CTA from "@/components/home/cta"
 
 const platform: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const platform: React.FC = () => {
       <IsometricCardStack />
       <MarineComputationalComponent />
       <MechanisticEngine />
+      <CTA/>
       </div>
   )
 }

@@ -5,31 +5,34 @@ import HeroVideo from "@/components/pipeline/hero-video"
 import PipelineSelector from "@/components/pipeline/link-grid"
 import PipelineContent from "@/components/pipeline/feature"
 import { PIPELINE_DATA, PipelineKey } from "@/components/pipeline/data/pipeline"
+import CTA from "@/components/home/cta"
 
 export default function HomePage() {
-  const [activeKey, setActiveKey] = useState<PipelineKey>("feed")
+  const [activeKey, setActiveKey] = useState<PipelineKey>("Feed Optimization")
 
-  const activeData = PIPELINE_DATA.find(
-    (item) => item.key === activeKey
-  )!
+  // Map the data to the format PipelineSelector expects
+  const items = PIPELINE_DATA.map((item) => ({
+    key: item.key,
+    label: item.title,
+  }))
 
   return (
     <>
       <HeroVideo
         videoSrc="/videos/ocean.mp4"
-        eyebrow="Powered by Alkemyst"
-        title="From the Ocean,"
-        highlight="Without the Catch"
+        eyebrow="Powered by ALKEMYST™, ensuring consistency, scalability, and traceability."
+        title="From,"
+        highlight="the Ocean, Without"
+        title2="the Catch,"
         subtitle="We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty."
       />
 
-      <PipelineSelector
-        items={PIPELINE_DATA.map(({ key, label }) => ({ key, label }))}
-        activeKey={activeKey}
-        onChange={(key) => setActiveKey(key as PipelineKey)}
-      />
+      {/* Pipeline Selector */}
+      <PipelineSelector items={items} />
 
-      <PipelineContent data={activeData} />
+      {/* Pipeline Content */}
+      <PipelineContent />
+      <CTA/>
     </>
   )
 }

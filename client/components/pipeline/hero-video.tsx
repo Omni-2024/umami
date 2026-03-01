@@ -4,6 +4,7 @@ interface HeroVideoProps {
   videoSrc: string
   eyebrow?: string
   title: string
+  title2?: string
   highlight: string
   subtitle: string
 }
@@ -12,6 +13,7 @@ export default function HeroVideo({
   videoSrc,
   eyebrow,
   title,
+  title2,
   highlight,
   subtitle,
 }: HeroVideoProps) {
@@ -28,26 +30,37 @@ export default function HeroVideo({
       />
 
       {/* 5% blur overlay */}
-      <div className="absolute inset-0 bg-black/10 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-[#B1D4D8]/30 " />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
-        <div className="max-w-5xl text-white">
+        <div className="max-w-5xl text-white text-center -mt-30">
+        
           {eyebrow && (
-            <p className=" text-xs tracking-widest uppercase opacity-80 -mt-30">
-              {eyebrow}
-            </p>
-          )}
+  <div className="flex justify-center mb-2 text-center rounded-full border-2 border-white w-80 mx-auto">
+    <p className="text-[8px] tracking-widest uppercase rounded-full opacity-50 bg-[#FFFFFF] px-4 py-0.5 text-center inline-block ">
+      {eyebrow}
+    </p>
+  </div>
+)}
 
-          <h2 className="text-[44px] md:text-[64px]">
-          From the Ocean
-          <br />
-          <span className="font-italic">
-            Without the Catch
-          </span>
-        </h2>
+          <h2 className="text-[44px] md:text-[64px] leading-tight">
+  {/* Line 1 */}
+  {title}{" "}
+  <span className="font-italic">
+    The Ocean
+  </span>
 
-          <p className="max-w-sm mx-auto text-[18px] opacity-50 font-medium leading-relaxed">
+  <br />
+
+  {/* Line 2 */}
+  <span className="font-italic">
+    Without
+  </span>{" "}
+  {title2}
+</h2>
+
+          <p className="max-w-sm mx-auto text-[18px] !text-[#033E8A] font-medium leading-relaxed">
           We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty.
         </p>
         </div>
