@@ -10,7 +10,7 @@ import MechanisticEngine from "@/components/platform/input-output"
 const platform: React.FC = () => {
   return (
     <div className="relative w-full bg-white text-[#0F172A] overflow-hidden">
-    <CellBackground />
+    {/* <CellBackground /> */}
     <HeroOverlay />
       <RightGlow />
 

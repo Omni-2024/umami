@@ -26,7 +26,7 @@ const WhyPossibleSection: React.FC = () => {
           <span className="font-italic">Today?</span>
         </h2>
 
-        <p className="mt-2 text-[18px] !text-[#033E8A] font-medium leading-relaxed max-w-4xl mx-auto">
+        <p className="mt-2 text-[18px] !text-[#033E8A] font-regular leading-relaxed max-w-4xl mx-auto">
           “ALKEMYST computationally models the dynamic biological state of marine
           cells. Marine biology is dynamic in nature and needs special insight
           to increase foundational understanding. By integrating molecular,
@@ -52,7 +52,7 @@ const WhyPossibleSection: React.FC = () => {
                 </div>
 
                 {/* TEXT */}
-                <p className="text-sm font-medium leading-7">
+                <p className="text-sm !text-[#033E8A] font-medium leading-7">
                   {item.text}
                 </p>
               </div>

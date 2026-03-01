@@ -150,7 +150,7 @@ export default function MechanisticEngine() {
       `}</style>
 
       <section className="min-h-screen w-full flex items-center justify-center bg-[#f0f9ff] px-10 py-20 overflow-hidden font-sans">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-20">
+        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-10">
           
           {/* ── LEFT: The Diagram ── */}
           <div className="flex flex-col items-center flex-shrink-0 w-full max-w-[480px]">
