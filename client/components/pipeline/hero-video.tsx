@@ -34,7 +34,7 @@ export default function HeroVideo({
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
-        <div className="max-w-5xl text-white text-center -mt-30">
+        <div className="max-w-5xl text-white text-center md:-mt-30">
         
           {eyebrow && (
   <div className="flex justify-center mb-2 text-center rounded-full border-2 border-white w-80 mx-auto">
@@ -44,7 +44,7 @@ export default function HeroVideo({
   </div>
 )}
 
-          <h2 className="text-[44px] md:text-[64px] leading-tight">
+          <h2 className="text-[40px] md:text-[64px] py-6 md-py-0 leading-tight">
   {/* Line 1 */}
   {title}{" "}
   <span className="font-italic">
@@ -60,7 +60,7 @@ export default function HeroVideo({
   {title2}
 </h2>
 
-          <p className="max-w-sm mx-auto text-[18px] !text-[#033E8A] font-medium leading-relaxed">
+          <p className="max-w-sm mx-auto text-[16px] !text-[#033E8A] font-medium leading-relaxed">
           We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty.
         </p>
         </div>

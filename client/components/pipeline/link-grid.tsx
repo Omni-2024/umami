@@ -11,7 +11,6 @@ export default function PipelineSelector({ items }: SelectorProps) {
   const [isStuck, setIsStuck] = useState(false)
   const sectionRef = useRef<HTMLElement | null>(null)
 
-  // Scroll to section
   const handleScroll = (key: string) => {
     const el = document.getElementById(`pipeline-${key}`)
     if (el) {
@@ -22,7 +21,6 @@ export default function PipelineSelector({ items }: SelectorProps) {
     }
   }
 
-  // Detect sticky state
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return
@@ -34,7 +32,6 @@ export default function PipelineSelector({ items }: SelectorProps) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Scroll Spy
   useEffect(() => {
     const sections = items.map((item) =>
       document.getElementById(`pipeline-${item.key}`)
@@ -68,14 +65,17 @@ export default function PipelineSelector({ items }: SelectorProps) {
   }, [items])
 
   return (
-    <section ref={sectionRef} className="sticky top-0 z-50 -mt-40">
+    <section ref={sectionRef} className="sticky top-0 z-50 md:-mt-40">
       <div
-        className={`relative py-10 px-20 bg-white transition-all duration-500 ease-in-out shadow-[0_-10px_40px_rgba(0,0,0,0.06)] ${
-          isStuck ? "rounded-none" : "rounded-t-[120px] md:rounded-t-[180px]"
+        className={`relative py-6 md:py-10 px-4 md:px-20 bg-white transition-all duration-500 ease-in-out shadow-[0_-10px_40px_rgba(0,0,0,0.06)] ${
+          isStuck ? "rounded-none" : "md:rounded-t-[180px]"
         }`}
       >
-        <div className="mx-auto max-w-8xl px-2">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-6">
+        <div className="mx-auto max-w-8xl">
+          
+          {/* ✅ Mobile: 2 columns | Desktop unchanged */}
+          <div className="grid grid-cols-2 gap-y-6 gap-x-6 md:flex md:flex-wrap md:justify-center">
+
             {items.map((item) => {
               const active = item.key === activeKey
 
@@ -83,7 +83,7 @@ export default function PipelineSelector({ items }: SelectorProps) {
                 <button
                   key={item.key}
                   onClick={() => handleScroll(item.key)}
-                  className="relative text-[10px] tracking-[0.25em] uppercase font-medium transition-colors w-[calc(33.33%-3.5rem)] text-center"
+                  className="relative text-[8px] md:text-[11px] tracking-[0.25em] uppercase font-medium transition-colors text-center md:w-[calc(33.33%-3.5rem)]"
                 >
                   <span
                     className={
@@ -107,6 +107,7 @@ export default function PipelineSelector({ items }: SelectorProps) {
                 </button>
               )
             })}
+
           </div>
         </div>
       </div>

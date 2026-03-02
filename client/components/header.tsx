@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react"
+import Link from "next/link"
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -17,7 +18,9 @@ const Navbar: React.FC = () => {
 
         {/* Logo */}
         <div className="cursor-pointer">
-          <img src="/logo-b.png" alt="Logo" className="w-24 md:w-30" />
+          <Link href="/">
+            <img src="/logo-b.png" alt="Logo" className="w-24 md:w-30" />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -28,14 +31,16 @@ const Navbar: React.FC = () => {
                 key={item.label}
                 className="relative cursor-pointer text-white after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
-                {item.label}
+                <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
           </ul>
 
-          <button className="bg-[#03045E] !text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.1em]">
-            PARTNER WITH US
-          </button>
+          <Link href="/partner">
+            <button className="bg-[#03045E] !text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-[0.1em]">
+              PARTNER WITH US
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -53,17 +58,24 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-white text-[#0F172A] w-full px-6 py-6 flex flex-col gap-6 shadow-xl">
           {navItems.map((item) => (
-            <div
-              key={item.label}
-              className="font-bold text-[12px] tracking-[0.15em] cursor-pointer"
-            >
-              {item.label}
-            </div>
+            <Link key={item.label} href={item.href}>
+              <div
+                onClick={() => setIsOpen(false)} // close menu when clicked
+                className="font-bold text-[12px] tracking-[0.15em] cursor-pointer"
+              >
+                {item.label}
+              </div>
+            </Link>
           ))}
 
-          <button className="notfish px-6 py-3 rounded-full text-[10px] font-bold tracking-[0.1em] mt-4">
-            PARTNER WITH US
-          </button>
+          <Link href="/partner">
+            <button 
+              onClick={() => setIsOpen(false)}
+              className="notfish px-6 py-3 rounded-full text-[10px] font-bold tracking-[0.1em] mt-4"
+            >
+              PARTNER WITH US
+            </button>
+          </Link>
         </div>
       )}
     </nav>
