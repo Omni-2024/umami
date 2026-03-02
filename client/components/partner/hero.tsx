@@ -11,10 +11,17 @@ const HeroOverlay: React.FC = () => {
   }, []);
 
   return (
-    <section 
-      className="relative py-48 px-20 z-10 flex justify-center items-center min-h-screen overflow-hidden 
-      /* Clean Science Gradient: White to very faint Blue-Grey */
-      bg-[radial-gradient(circle_at_center,_#ffffff_0%,_#f0f9ff_100%)]"
+    <section
+      className="
+      relative 
+      py-28 sm:py-36 md:py-48
+      px-6 sm:px-10 md:px-16 lg:px-20
+      z-10 
+      flex justify-center items-center 
+      min-h-screen 
+      overflow-hidden
+      bg-[radial-gradient(circle_at_center,_#ffffff_0%,_#f0f9ff_100%)]
+      "
     >
       
       {/* Particles Layer */}
@@ -28,7 +35,6 @@ const HeroOverlay: React.FC = () => {
             fpsLimit: 120,
             particles: {
               number: { value: 70, density: { enable: true, area: 1000 } },
-              // High-tech blue tones that pop against white
               color: { value: ["#0ea5e9", "#7dd3fc", "#53f4d7"] },
               shape: { type: "circle" },
               opacity: {
@@ -43,16 +49,16 @@ const HeroOverlay: React.FC = () => {
                 enable: true,
                 distance: 180,
                 color: "#0ea5e9",
-                opacity: 0.15, // Keep it light and airy
+                opacity: 0.15,
                 width: 1,
                 triangles: {
                   enable: true,
-                  opacity: 0.04, // "Molecular lattice" look
+                  opacity: 0.04,
                 },
               },
               move: {
                 enable: true,
-                speed: 0.6, // Very gentle, clinical movement
+                speed: 0.6,
                 direction: "none",
                 outModes: { default: "out" },
                 attract: { enable: true, rotateX: 600, rotateY: 1200 },
@@ -64,11 +70,11 @@ const HeroOverlay: React.FC = () => {
               },
               modes: {
                 bubble: {
-                  distance: 250,
+                  distance: 200,
                   size: 8,
                   duration: 2,
                   opacity: 0.6,
-                  color: "#0284c7" // Darker blue on hover for "focus"
+                  color: "#0284c7",
                 },
               },
             },
@@ -77,23 +83,39 @@ const HeroOverlay: React.FC = () => {
         />
       </div>
 
-      {/* Centered Text - Adjusted for light background visibility */}
+      {/* Centered Text */}
       <div className="relative z-10 text-center max-w-5xl">
-        <h1 className="text-[42px] sm:text-[64px]">
+        
+        <h1
+          className="
+          text-3xl sm:text-5xl md:text-6xl lg:text-[64px]
+          leading-tight
+          font-light
+          text-[#0A192F]
+          "
+        >
           Let’s Build the <span className="font-italic">Future of the</span>
-          <br />
-          <span className="font-italic">Ocean</span> Economy Together
+          <br className="hidden sm:block" />
+          <span className="font-italic"> Ocean</span> Economy Together
         </h1>
 
-        <p className="mt-10 max-w-2xl mx-auto text-[18px] opacity-50 font-medium leading-relaxed">
+        <p
+          className="
+          mt-6 sm:mt-8 md:mt-10
+          max-w-md sm:max-w-2xl
+          mx-auto
+          text-sm sm:text-base md:text-lg
+          !text-[#033E8A]
+          leading-relaxed
+          md:px-0 px-8
+          "
+        >
           We partner with businesses across food, wellness,
-          and biotech to co-create solutions that are sustainable, ethical, and commercially scalable.
+          and biotech to co-create solutions that are sustainable,
+          ethical, and commercially scalable.
         </p>
-        
-        {/* Subtle Sci-Fi Accent: A clean scanning line */}
-        <div className="mt-12 h-[2px] w-40 bg-gradient-to-r from-transparent via-sky-400 to-transparent mx-auto opacity-40" />
-      </div>
 
+      </div>
     </section>
   );
 };
