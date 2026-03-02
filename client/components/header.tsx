@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <li
                 key={item.label}
-                className="relative cursor-pointer text-white after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:rounded after:transition-all after:duration-300 hover:after:w-full"
+                className="relative cursor-pointer text-white after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#CD5A99] after:rounded after:transition-all after:duration-300 hover:after:w-full"
               >
                 <Link href={item.href}>{item.label}</Link>
               </li>
