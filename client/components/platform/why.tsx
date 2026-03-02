@@ -19,14 +19,14 @@ const items = [
 const WhyPossibleSection: React.FC = () => {
   return (
     <section className="relative py-20 px-6 md:py-28 md:px-20 z-10">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto md:text-center">
 
-        <h2 className="text-[32px] md:text-[44px] font-medium">
+        <h2 className="text-[30px] md:text-[44px] font-medium">
           Why This is Possible{" "}
           <span className="font-italic">Today?</span>
         </h2>
 
-        <p className="mt-4 md:mt-2 text-[16px] md:text-[18px] !text-[#033E8A] font-medium leading-relaxed max-w-4xl mx-auto">
+        <p className="mt-4 md:mt-2 text-sm md:text-[18px] !text-[#033E8A] font-regular leading-relaxed max-w-4xl mx-auto text-justify md:text-center">
           “ALKEMYST computationally models the dynamic biological state of marine
           cells. Marine biology is dynamic in nature and needs special insight
           to increase foundational understanding. By integrating molecular,
@@ -35,14 +35,14 @@ const WhyPossibleSection: React.FC = () => {
           applications.”
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 mt-14 md:mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-10 mt-14 md:mt-20">
           {items.map((item, index) => {
             const Icon = item.icon
 
             return (
               <div
                 key={index}
-                className="relative rounded-3xl bg-[#F2F8FF] px-6 sm:px-8 pt-14 pb-10 text-center shadow-sm border-neon"
+                className="relative rounded-3xl bg-[#F2F8FF] px-6 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon"
               >
                 {/* ICON BADGE */}
                 <div className="absolute -top-7 left-1/2 -translate-x-1/2">
