@@ -29,35 +29,37 @@ const BiologicalBottleneckSection: React.FC = () => {
   };
 
   return (
-    <section className="relative py-28 px-20 bg-white z-10">
-      <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        {/* LEFT IMAGE */}
-        <div className="w-full flex justify-center md:justify-start">
+    <section className="relative py-10 md:py-28 px-6 md:px-20 bg-white z-10">
+      <div className="md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+        {/* LEFT IMAGE (Fish comes FIRST on mobile automatically) */}
+        <div className="order-1 md:order-none w-full flex justify-center md:justify-start">
           <Image
             src="/home/fish.PNG"
             alt="Marine network illustration"
             width={600}
             height={600}
-            className="object-contain"
+            className="object-contain w-[85%] sm:w-[70%] md:w-auto"
           />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="flex flex-col gap-8">
-          <h2 className="text-[44px] md:text-[44px] leading-tight">
+        <div className="order-2 md:order-none flex flex-col gap-6 md:gap-8 text-left">
+
+          <h2 className="text-[30px] md:text-[44px] leading-tight">
             Understanding the{" "}
             <span className="text-[#D4AF37] font-italic">
               Biological Bottleneck
             </span>
           </h2>
 
-          <p className="text-[16px] !text-[#033E8A] font-medium leading-relaxed">
+          <p className="text-[15px] md:text-[16px] !text-[#033E8A] font-medium leading-relaxed text-justify">
             Our proprietary ALKEMYST™ platform combines multi-omics, predictive
             modeling, and digital twins with advanced marine cell cultivation.
           </p>
 
           {/* ACCORDION */}
-          <div className="flex flex-col gap-4 ">
+          <div className="flex flex-col gap-3 md:gap-4">
             {accordionData.map((item, index) => (
               <div
                 key={index}
@@ -68,15 +70,15 @@ const BiologicalBottleneckSection: React.FC = () => {
                 }`}
               >
                 <button
-                  className="w-full px-4 py-3 text-left flex justify-between items-center text-[18px] hover:bg-white/70 transition"
+                  className="w-full px-4 py-3 text-left flex justify-between items-center text-[16px] md:text-[18px] hover:bg-white/70 transition"
                   onClick={() => handleAccordionClick(index)}
                 >
-                  {/* Only text gets ghost class */}
                   <span className="ghost">{item.title}</span>
-                  <span className="text-xl">{activeIndex === index ? "−" : "+"}</span>
+                  <span className="text-xl">
+                    {activeIndex === index ? "−" : "+"}
+                  </span>
                 </button>
 
-                {/* Smooth animated content */}
                 <AnimatePresence initial={false}>
                   {activeIndex === index && (
                     <motion.div
@@ -87,7 +89,9 @@ const BiologicalBottleneckSection: React.FC = () => {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="px-4 text-[14px] overflow-hidden"
                     >
-                      <div className="py-3  !text-[#033E8A]">{item.content}</div>
+                      <div className="py-3 !text-[#033E8A] text-justify">
+                        {item.content}
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
