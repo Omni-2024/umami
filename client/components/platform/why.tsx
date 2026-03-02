@@ -18,15 +18,15 @@ const items = [
 
 const WhyPossibleSection: React.FC = () => {
   return (
-    <section className="relative py-28 px-20 z-10">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section className="relative py-20 px-6 md:py-28 md:px-20 z-10">
+      <div className="max-w-5xl mx-auto text-center">
 
-        <h2 className="text-[44px] font-medium">
+        <h2 className="text-[32px] md:text-[44px] font-medium">
           Why This is Possible{" "}
           <span className="font-italic">Today?</span>
         </h2>
 
-        <p className="mt-2 text-[18px] !text-[#033E8A] font-regular leading-relaxed max-w-4xl mx-auto">
+        <p className="mt-4 md:mt-2 text-[16px] md:text-[18px] !text-[#033E8A] font-medium leading-relaxed max-w-4xl mx-auto">
           “ALKEMYST computationally models the dynamic biological state of marine
           cells. Marine biology is dynamic in nature and needs special insight
           to increase foundational understanding. By integrating molecular,
@@ -35,33 +35,30 @@ const WhyPossibleSection: React.FC = () => {
           applications.”
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 mt-14 md:mt-20">
           {items.map((item, index) => {
             const Icon = item.icon
 
             return (
               <div
                 key={index}
-                className="relative rounded-3xl bg-[#F2F8FF] px-8 pt-14 pb-10 text-center shadow-sm border-neon"
+                className="relative rounded-3xl bg-[#F2F8FF] px-6 sm:px-8 pt-14 pb-10 text-center shadow-sm border-neon"
               >
                 {/* ICON BADGE */}
                 <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#E6F0FF] border border-[#D6E6FF]">
-                    <Icon className="h-6 w-6 text-[#0F172A]" />
+                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#E6F0FF] border border-[#D6E6FF]">
+                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#0F172A]" />
                   </div>
                 </div>
 
                 {/* TEXT */}
-                <p className="text-sm !text-[#033E8A] font-medium leading-7">
+                <p className="text-sm sm:text-base !text-[#033E8A] font-medium leading-7">
                   {item.text}
                 </p>
               </div>
             )
           })}
         </div>
-
-
-
       </div>
     </section>
   )
