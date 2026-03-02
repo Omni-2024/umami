@@ -47,9 +47,9 @@ export default function IsometricCardStack() {
                   onMouseLeave={() => setHovered(null)}
                   className="absolute transition-all duration-500 ease-out cursor-pointer"
                   style={{
-                    width: "350px",
-                    height: "200px",
-                    left: "-175px",
+                    width: "300px",
+                    height: "180px",
+                    left: "-145px",
                     top: "-90px",
                     transform: `translateZ(${(layers.length - 1 - indexFromTop) * gapPerLayer}px) ${isHov ? 'translateZ(25px)' : ''}`,
                     backgroundColor: layer.color,
@@ -87,8 +87,8 @@ export default function IsometricCardStack() {
         </div>
 
         {/* --- RIGHT SIDE: TEXT CONTENT --- */}
-        <div className="flex-1 max-w-xl text-left space-y-6 -mt-20 lg:-mt-20 w-full">
-          <h2 className="text-[32px] md:text-[44px] leading-tight md:leading-tight">
+        <div className="flex-1 max-w-xl text-left space-y-6 mt-20 md:-mt-20 lg:-mt-10 w-full">
+          <h2 className="text-[30px] md:text-[44px] leading-tight md:leading-tight">
             A Computational{" "}
             <span className="font-italic">
                Representation of Living

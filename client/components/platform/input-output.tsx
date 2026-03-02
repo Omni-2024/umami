@@ -164,12 +164,12 @@ export default function MechanisticEngine() {
             </div>
 
             {/* Cell Container: Floating */}
-            <div className="relative flex items-center justify-center animate-[subtleFloat_5s_ease-in-out_infinite] w-[380px] h-[350px] rounded-[60px] bg-[#C7CDDC] overflow-hidden">
+            <div className="relative flex items-center justify-center animate-[subtleFloat_5s_ease-in-out_infinite] w-full md:w-[380px] h-[350px] rounded-[60px] bg-[#C7CDDC] overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center animate-slow-spin">
                 <img 
                   src="/platform/rotate-cell.png" 
                   alt="Rotating data visualization"
-                  className="w-[280px] h-[280px] object-contain opacity-40" 
+                  className="w-full md:w-[280px] h-[200px] md:h-[280px] object-contain opacity-40" 
                 />
               </div>
             </div>
@@ -185,8 +185,8 @@ export default function MechanisticEngine() {
           </div>
 
           {/* ── RIGHT: Text Content ── */}
-          <div className="flex flex-col gap-6 w-full max-w-[420px] text-center md:text-left animate-[fadeSlideIn_0.8s_ease_both] delay-500">
-            <h2 className="text-[44px] md:text-[44px] leading-tight text-[#1a2e5a]">
+          <div className="flex flex-col gap-6 w-full max-w-[420px] text-left animate-[fadeSlideIn_0.8s_ease_both] delay-500">
+            <h2 className="text-[30px] md:text-[44px] leading-tight text-[#1a2e5a]">
               A Mechanistic Engine <br />
               <span className="font-italic">for Marine Biology</span>
             </h2>
