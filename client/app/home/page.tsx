@@ -13,13 +13,23 @@ const UmamiLanding: React.FC = () => {
 
       {/* RIGHT DNA GLOW – spans hero + stats */}
       
-      <HeroSection />
+      <section id="hero">
+        <HeroSection />
+      </section>
       <RightGlow />
 
-      <StatsSection />
-      <BiologicalBottleneckSection/>
-      <PartnerMarquee/>
-      <SpotlightSection/>
+      <section id="stats">
+        <StatsSection />
+      </section>
+      <section id="bottleneck">
+        <BiologicalBottleneckSection />
+      </section>
+      <section id="partners">
+        <PartnerMarquee />
+      </section>
+      <section id="spotlight">
+        <SpotlightSection />
+      </section>
       <CTA/>
 
     </div>

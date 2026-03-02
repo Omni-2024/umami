@@ -11,17 +11,47 @@ const Footer: React.FC = () => {
   };
 
   const sections = [
-    { title: "Home", items: ["Section 1", "Section 2", "Section 3", "Section 4"] },
-    { title: "Pages", items: ["Page 1", "Page 2", "Page 3", "Page 4"] },
+    {
+      title: "Home",
+      items: [
+        { label: "Bio Limits", id: "stats" },
+        { label: "Bio Bottleneck", id: "bottleneck" },
+        { label: "Trusted Partners", id: "partners" },
+        { label: "Umami Spotlight", id: "spotlight" },
+      ],
+    },
+    {
+      title: "Pages",
+      items: [
+        { label: "Home", href: "/" },
+        { label: "Platform", href: "/platform" },
+        { label: "Pipeline", href: "/pipeline" },
+        { label: "People", href: "/people" },
+      ],
+    },
     { title: "About", items: ["Page 1", "Page 2", "Page 3", "Page 4"] },
   ];
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  const handleClick = (item: any) => {
+    if (typeof item === "string") return;
+    if (item.id) handleScroll(item.id);
+    else if (item.href) window.location.href = item.href;
+  };
 
   return (
     <footer className="w-full px-4 sm:px-6 my-10">
       <div className="bg-gradient-to-r from-[#CCEFF4] to-[#0095C8] rounded-[28px] md:rounded-[40px] px-6 py-8 sm:px-10 sm:py-10 md:p-12 text-[#111F33] font-sans">
-        
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
-          
           {/* Logo & Newsletter */}
           <div className="md:col-span-4 flex flex-col gap-6 md:gap-8">
             <div className="flex items-center gap-3">
@@ -50,7 +80,6 @@ const Footer: React.FC = () => {
 
           {/* Links Section */}
           <div className="md:col-span-5">
-
             {/* Mobile Accordion */}
             <div className="md:hidden space-y-4">
               {sections.map((section, index) => (
@@ -74,9 +103,13 @@ const Footer: React.FC = () => {
                     }`}
                   >
                     <ul className="space-y-2 text-sm font-medium">
-                      {section.items.map((item, i) => (
-                        <li key={i} className="cursor-pointer hover:opacity-60">
-                          {item}
+                      {section.items.map((item: any, i: number) => (
+                        <li
+                          key={i}
+                          onClick={() => handleClick(item)}
+                          className="cursor-pointer hover:opacity-60"
+                        >
+                          {typeof item === "string" ? item : item.label}
                         </li>
                       ))}
                     </ul>
@@ -85,40 +118,43 @@ const Footer: React.FC = () => {
               ))}
             </div>
 
-            {/* Desktop Links (UNCHANGED) */}
-            <div className="hidden md:grid grid-cols-3 gap-4">
+            {/* Desktop Links (Centered) */}
+            <div className="hidden md:flex justify-center gap-40">
               {sections.map((section, index) => (
                 <div key={index}>
-                  <h4 className="font-black text-sm mb-6">
+                  <h4 className="font-black font-semibold text-sm md:text-[18px] mb-6">
                     {section.title}
                   </h4>
-                  <ul className="space-y-3 text-sm font-medium">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="cursor-pointer hover:opacity-60">
-                        {item}
+                  <ul className="space-y-3 text-sm font-medium !text-[#033E8A]">
+                    {section.items.map((item: any, i: number) => (
+                      <li
+                        key={i}
+                        onClick={() => handleClick(item)}
+                        className="cursor-pointer hover:!text-[#CD5A99] !text-[#033E8A] hover-slide-right"
+                      >
+                        {typeof item === "string" ? item : item.label}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-
           </div>
 
           {/* Address & Socials */}
-          <div className="md:col-span-3 flex flex-col gap-2 md:gap-6">
+          <div className="md:col-span-3 flex flex-col gap-2 md:gap-6 md:ml-40">
             <div>
-              <h4 className="font-black text-xs md:text-sm mb-2 md:mb-4">
+              <h4 className="font-black font-semibold text-xs md:text-[18px] mb-2 md:mb-4">
                 Address
               </h4>
               <>
                 {/* Mobile – Single Line */}
-                <p className="text-xs font-medium md:hidden">
+                <p className="text-xs font-medium md:hidden !text-[#033E8A]">
                   89 Science Park Dr, #04-22, Singapore 11826
                 </p>
 
-                {/* Desktop – Original Multi Line */}
-                <p className="hidden md:block text-sm font-medium leading-relaxed">
+                {/* Desktop – Multi Line */}
+                <p className="hidden md:block text-sm font-medium leading-relaxed !text-[#033E8A]">
                   89 Science Park Dr,<br />
                   #04-22, Singapore<br />
                   11826
@@ -140,7 +176,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 md:mt-16 pt-4 md:pt-6 border-t border-[#03045E]/50 flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center text-[9px] md:text-[10px] font-bold tracking-widest uppercase opacity-70 text-center md:text-left">
+        <div className="mt-10 md:mt-10 pt-4 md:pt-6 border-t border-[#03045E]/50 flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center text-[9px] md:text-[10px] font-bold tracking-widest uppercase opacity-70 text-center md:text-left">
           <span>Site by Maven Creative</span>
           <span>Copyright ©2026 Umami All Rights Reserved</span>
           <span className="cursor-pointer">Privacy Policy</span>
