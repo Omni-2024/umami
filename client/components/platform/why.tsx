@@ -21,12 +21,12 @@ const WhyPossibleSection: React.FC = () => {
     <section className="relative py-20 px-6 md:py-28 md:px-20 z-10">
       <div className="max-w-5xl mx-auto md:text-center">
 
-        <h2 className="text-[30px] md:text-[44px] font-medium">
+        <h2 className="text-[30px] lg:text-[44px] font-medium">
           Why This is Possible{" "}
           <span className="font-italic">Today?</span>
         </h2>
 
-        <p className="mt-4 md:mt-2 text-sm md:text-[18px] !text-[#033E8A] font-regular leading-relaxed max-w-4xl mx-auto text-justify md:text-center">
+        <p className="mt-4 lg:my-4 text-sm md:text-[18px] lg:w-[789px] !text-[#033E8A] font-regular leading-[34px] max-w-4xl mx-auto text-justify md:text-center">
           “ALKEMYST computationally models the dynamic biological state of marine
           cells. Marine biology is dynamic in nature and needs special insight
           to increase foundational understanding. By integrating molecular,
@@ -42,17 +42,17 @@ const WhyPossibleSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="relative rounded-3xl bg-[#F2F8FF] px-6 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon"
+                className="relative rounded-3xl bg-[#F2F8FF] lg:px-10 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon lg:h-[282px]"
               >
                 {/* ICON BADGE */}
                 <div className="absolute -top-7 left-1/2 -translate-x-1/2">
                   <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#E6F0FF] border border-[#D6E6FF]">
-                    <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#0F172A]" />
+                    <Icon className="lg:h-10 lg:w-10 sm:h-6 sm:w-6 text-[#0F172A]" />
                   </div>
                 </div>
 
                 {/* TEXT */}
-                <p className="text-sm sm:text-base !text-[#033E8A] font-medium leading-7">
+                <p className="lg:text-[20px] sm:text-base !text-[#033E8A] font-medium lg:leading-[34px]">
                   {item.text}
                 </p>
               </div>
