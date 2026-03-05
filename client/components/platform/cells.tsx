@@ -6,7 +6,7 @@ const CellBackground: React.FC = () => {
     <div className="absolute inset-0 overflow-hidden z-0">
 
       {/* LEFT CELL */}
-      <div className="absolute left-[2%] top-[-5%] w-[1020px] h-[720px]">
+      <div className="absolute left-[2%] top-[-0%] w-[1020px] h-[720px]">
         <Image
           src="/platform/cell1.png"
           alt="Marine Cell Left"
@@ -17,7 +17,7 @@ const CellBackground: React.FC = () => {
       </div>
 
       {/* RIGHT CELL */}
-      <div className="absolute right-[0%] top-[-15%] w-[1220px] h-[1020px]">
+      <div className="absolute right-[0%] top-[-7%] w-[1220px] h-[1020px]">
         <Image
           src="/platform/cell2.png"
           alt="Marine Cell Right"

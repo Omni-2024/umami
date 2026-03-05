@@ -41,21 +41,21 @@ const WhyPossibleSection: React.FC = () => {
 
             return (
               <div
-                key={index}
-                className="relative rounded-3xl bg-[#F2F8FF] lg:px-10 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon lg:h-[282px]"
-              >
-                {/* ICON BADGE */}
-                <div className="absolute -top-7 left-1/2 -translate-x-1/2">
-                  <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#E6F0FF] border border-[#D6E6FF]">
-                    <Icon className="lg:h-10 lg:w-10 sm:h-6 sm:w-6 text-[#0F172A]" />
-                  </div>
-                </div>
+  key={index}
+  className="relative rounded-3xl lg:px-10 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon-why lg:h-[282px]"
+>
+  {/* ICON BADGE */}
+  <div className="absolute -top-7 left-1/2 -translate-x-1/2">
+    <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#E6F0FF] border border-[#D6E6FF]">
+      <Icon className="lg:h-10 lg:w-10 sm:h-6 sm:w-6 text-[#0F172A]" />
+    </div>
+  </div>
 
-                {/* TEXT */}
-                <p className="lg:text-[20px] sm:text-base !text-[#033E8A] font-medium lg:leading-[34px]">
-                  {item.text}
-                </p>
-              </div>
+  {/* TEXT */}
+  <p className="lg:text-[20px] sm:text-base !text-[#033E8A] font-medium lg:leading-[34px]">
+    {item.text}
+  </p>
+</div>
             )
           })}
         </div>
