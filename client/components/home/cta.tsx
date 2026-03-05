@@ -18,11 +18,11 @@ const CTA: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 w-full">
-          <button className="fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[11px] font-black tracking-widest uppercase hover:bg-slate-300 transition-all">
+          <button className="lg:w-[285.64px] lg:h-[66px] fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-300 transition-all">
             Partner With Us
           </button>
 
-          <button className="notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[11px] font-black tracking-widest uppercase hover:bg-slate-800 transition-all">
+          <button className="lg:w-[285.64px] lg:h-[66px] notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-800 transition-all">
             Request a Consultation
           </button>
         </div>

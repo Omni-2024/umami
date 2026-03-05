@@ -12,15 +12,15 @@ const PartnerMarquee: React.FC = () => {
   return (
     <section className="relative py-20 md:py-28 bg-white z-10">
       {/* Heading */}
-      <div className="md:max-w-5xl mx-auto mb-6 md:mb-16 text-center">
-        <h2 className="text-[30px] md:text-5xl leading-tight">
+      <div className="md:max-w-5xl mx-auto mb-6 lg:mb-20 text-center">
+        <h2 className="text-[30px] md:text-5xl leading-[52px]">
           Our Trusted <br />
           <span className="font-italic">Partners</span>
         </h2>
       </div>
 
       {/* Marquee Wrapper */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden lg:mb-16">
         {/* Track */}
         <div className="flex w-max animate-marquee gap-32 items-center">
           {/* First set */}
@@ -29,7 +29,7 @@ const PartnerMarquee: React.FC = () => {
               key={`first-${index}`}
               src={partner.src}
               alt={partner.name}
-              className="h-20 md:h-30 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="h-20 md:h-30 w-auto grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             />
           ))}
 

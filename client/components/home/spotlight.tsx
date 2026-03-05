@@ -23,13 +23,13 @@ const SpotlightSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 md:py-28 px-6 md:px-20 z-10 bg-[#E3F2FD]">
+    <section className="relative py-16 lg:py-34 px-6 md:px-20 z-10 bg-[#E3F2FD]">
       <div className="md:max-w-5xl mx-auto">
 
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-0 mb-12 md:mb-16 text-left">
-          <div>
-            <p className="text-[8px] font-bold tracking-[0.2em] text-[#D4AF37] uppercase mb-2 md:mb-4 leading-tight">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-0 mb-12 lg:mb-16 text-left">
+          <div className='lg:-ml-10'>
+            <p className="text-[12px] font-bold tracking-[0.2em] !text-[#CD5A99] uppercase mb-2 md:mb-4 leading-tight">
               Knowledge Center
             </p>
 
@@ -40,8 +40,8 @@ const SpotlightSection: React.FC = () => {
 
           {/* Icon accents (unchanged desktop) */}
           <div className="hidden md:flex gap-4 opacity-30">
-            <div className="w-6 h-6 border border-[#0F172A] rounded-full flex items-center justify-center text-[10px]">🌐</div>
-            <div className="w-6 h-6 border border-[#0F172A] rounded-full flex items-center justify-center text-[10px]">🧬</div>
+            <div className="w-6 h-6 rounded-full flex items-center justify-center text-[20px]">🌐</div>
+            <div className="w-6 h-6 rounded-full flex items-center justify-center text-[20px]">🧬</div>
           </div>
         </div>
 
@@ -62,11 +62,11 @@ const SpotlightSection: React.FC = () => {
               </div>
 
               {/* Text */}
-              <h3 className="text-[18px] md:text-[20px] font-medium mb-2 md:mb-3 leading-tight">
+              <h3 className="text-[18px] lg:text-[22px] font-medium mb-2 md:mb-3 leading-tight">
                 {item.title}
               </h3>
 
-              <p className="text-[13px] md:text-[12px] leading-relaxed opacity-70 max-w-full md:max-w-[90%] mx-auto md:mx-0 text-justify">
+              <p className="text-[13px] lg:text-[13px] leading-relaxed opacity-70 max-w-full md:max-w-full mx-auto md:mx-0 text-justify">
                 {item.description}
               </p>
             </div>

@@ -122,15 +122,15 @@ const Footer: React.FC = () => {
             <div className="hidden md:flex justify-center gap-40">
               {sections.map((section, index) => (
                 <div key={index}>
-                  <h4 className="font-black font-semibold text-sm md:text-[18px] mb-6">
+                  <h4 className="font-black font-semibold text-sm lg:text-[18px] mb-6">
                     {section.title}
                   </h4>
-                  <ul className="space-y-3 text-sm font-medium !text-[#033E8A]">
+                  <ul className="space-y-3 text-sm font-medium">
                     {section.items.map((item: any, i: number) => (
                       <li
                         key={i}
                         onClick={() => handleClick(item)}
-                        className="cursor-pointer hover:!text-[#CD5A99] !text-[#033E8A] hover-slide-right"
+                        className="cursor-pointer hover:!text-[#CD5A99] hover-slide-right"
                       >
                         {typeof item === "string" ? item : item.label}
                       </li>
