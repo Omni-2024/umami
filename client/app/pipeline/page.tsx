@@ -10,10 +10,10 @@ import CTA from "@/components/home/cta"
 export default function HomePage() {
   const [activeKey, setActiveKey] = useState<PipelineKey>("Feed Optimization")
 
-  // Map the data to the format PipelineSelector expects
+  // ✅ Use LABEL instead of TITLE
   const items = PIPELINE_DATA.map((item) => ({
     key: item.key,
-    label: item.title,
+    label: item.label,
   }))
 
   return (
@@ -21,9 +21,9 @@ export default function HomePage() {
       <HeroVideo
         videoSrc="/videos/ocean.mp4"
         eyebrow="Powered by ALKEMYST™, ensuring consistency, scalability, and traceability."
-        title="From,"
+        title="From"
         highlight="the Ocean, Without"
-        title2="the Catch,"
+        title2="the Catch"
         subtitle="We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty."
       />
 
@@ -32,7 +32,8 @@ export default function HomePage() {
 
       {/* Pipeline Content */}
       <PipelineContent />
-      <CTA/>
+
+      <CTA />
     </>
   )
 }

@@ -16,7 +16,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "Feed Optimization",
     label: "Feed Optimization",
     eyebrow: "Pipeline",
-    title: "Feed Optimization",
+    title: "Feed",
     highlight: "Optimization",
     description: [
       "Feed is the single largest cost in aquaculture, yet formulation decisions are still driven by trial-and-error rather than biological response.",
@@ -29,7 +29,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "protein",
     label: "Alternative Proteins",
     eyebrow: "Pipeline",
-    title: "Alternative Proteins",
+    title: "Alternative",
     highlight: "Proteins",
     description: [
       "Scaling alternative marine proteins is constrained by biological variability, inconsistent quality, and high development cost.",
@@ -42,7 +42,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "genetics",
     label: "Breeding & Genetics",
     eyebrow: "Pipeline",
-    title: "Breeding & Genetics",
+    title: "Breeding &",
     highlight: "Genetics",
     description: [
       "Breeding cycles are slow, capital-intensive, and often disconnected from the biological mechanisms that actually drive performance.",
@@ -55,7 +55,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "functional",
     label: "Functional Nutrition Optimization",
     eyebrow: "Pipeline",
-    title: "Functional Nutrition Optimization",
+    title: "Functional Nutrition",
     highlight: "Optimization",
     description: [
       "Most nutrition strategies focus on ingredient composition, not how nutrients are actually absorbed, allocated, and utilized by cells.",
@@ -68,7 +68,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "bioactives",
     label: "Marine Bioactives for Skincare & Supplements",
     eyebrow: "Pipeline",
-    title: "Marine Bioactives for Skincare & Supplements",
+    title: "Marine Bioactives for",
     highlight: "Skincare & Supplements",
     description: [
       "Marine bioactives are in high demand, but traditional sourcing suffers from contamination risk, inconsistency, and limited scalability.",
@@ -81,7 +81,7 @@ export const PIPELINE_DATA: PipelineItem[] = [
     key: "disease",
     label: "Disease Detection & Resilience",
     eyebrow: "Pipeline",
-    title: "Disease Detection & Resilience",
+    title: "Disease Detection",
     highlight: "& Resilience",
     description: [
       "Disease is often detected manually, and often only after performance declines, when intervention is costly and outcomes are uncertain, resulting in billion dollar losses. ",
