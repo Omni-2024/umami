@@ -1,7 +1,9 @@
 "use client";
+import { useRouter } from "next/navigation"
 import React from "react";
 
 const CTA: React.FC = () => {
+  const router = useRouter()
   return (
     <section className="relative py-16 md:py-28 px-6 md:px-20 z-10">
       <div className="md:max-w-5xl mx-auto bg-[#E5F7F9] rounded-[30px] md:rounded-[40px] py-14 md:py-20 px-6 md:px-12 text-center border-neon-cta">
@@ -18,13 +20,23 @@ const CTA: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 w-full">
-          <button className="lg:w-[285.64px] lg:h-[66px] fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-300 transition-all">
+          
+          {/* Partner Button */}
+          <button
+            className="lg:w-[285.64px] lg:h-[66px] fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-300 transition-all"
+            onClick={() => router.push("/partner")}
+          >
             Partner With Us
           </button>
 
-          <button className="lg:w-[285.64px] lg:h-[66px] notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-800 transition-all">
+          {/* Consultation Button */}
+          <button
+            className="lg:w-[285.64px] lg:h-[66px] notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-800 transition-all"
+            onClick={() => router.push("/consultation")}
+          >
             Request a Consultation
           </button>
+
         </div>
       </div>
 
