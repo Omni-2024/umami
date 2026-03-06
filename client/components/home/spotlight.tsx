@@ -23,11 +23,11 @@ const SpotlightSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 lg:py-34 px-6 md:px-20 z-10 bg-[#E3F2FD]">
+    <section className="relative mt-6 lg:mt-0 py-16 lg:py-34 px-6 md:px-20 z-10 bg-[#E3F2FD]">
       <div className="md:max-w-5xl mx-auto">
 
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-0 mb-12 lg:mb-16 text-left">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 md:gap-0 mb-6 lg:mb-16 text-left">
           <div className='lg:-ml-10'>
             <p className="text-[12px] font-bold tracking-[0.2em] !text-[#CD5A99] uppercase mb-2 md:mb-4 leading-tight">
               Knowledge Center

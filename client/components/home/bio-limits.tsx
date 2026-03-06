@@ -8,8 +8,8 @@ const StatsSection: React.FC = () => {
       <div className="relative z-20">
 
         {/* Heading */}
-        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-6">
-          <h2 className="text-[30px] md:text-5xl leading-[54px] text-left md:text-center">
+        <div className="max-w-5xl mx-auto text-center mb-8 md:mb-6">
+          <h2 className="text-[30px] md:text-5xl md:leading-[54px] text-left md:text-center">
             The Blue Economy Is Hitting
             <br className="hidden md:block" />
             <span className="text-[#D4AF37] font-italic">
@@ -17,8 +17,8 @@ const StatsSection: React.FC = () => {
             </span>
           </h2>
 
-          <p className="text-justify md:text-center my-4 lg:my-10 lg:mt-6 max-w-4xl mx-auto text-[16px] md:text-[18px] 
-          opacity-80 !text-[#033E8A] font-medium leading-[24px]">
+          <p className="text-justify md:text-center mt-4 lg:my-10 lg:mt-6 max-w-4xl mx-auto text-[13px] md:text-[18px] 
+          opacity-80 !text-[#033E8A] font-medium md:leading-[24px]">
             Fish biology is uniquely complex, adaptive, and powerful and produces
             compounds critical to human health. Yet, without deep biological
             understanding, demand and supply remain fundamentally misaligned.
@@ -54,11 +54,11 @@ const StatsSection: React.FC = () => {
                 ${index === 2 ? "col-span-2 justify-self-center md:col-span-1" : ""}
               `}
             >
-              <h3 className="text-3xl lg:text-[75px] font-semibold mb-4">
+              <h3 className="text-4xl lg:text-[75px] font-semibold mb-2 md:mb-4">
                 {item.value}
               </h3>
 
-              <p className="text-[11px] lg:text-[15px] !text-[#033E8A] leading-[19px]">
+              <p className="text-[11px] lg:text-[15px] !text-[#033E8A] md:leading-[19px]">
                 {item.text}
               </p>
             </div>

@@ -5,11 +5,11 @@ import React from "react";
 const CTA: React.FC = () => {
   const router = useRouter()
   return (
-    <section className="relative py-16 md:py-28 px-6 md:px-20 z-10">
+    <section className="relative py-20 md:py-28 px-6 md:px-20 z-10">
       <div className="md:max-w-5xl mx-auto bg-[#E5F7F9] rounded-[30px] md:rounded-[40px] py-14 md:py-20 px-6 md:px-12 text-center border-neon-cta">
         
         {/* Heading */}
-        <h2 className="text-[30px] md:text-5xl leading-tight mb-10 md:mb-12">
+        <h2 className="text-[30px] md:text-5xl md:leading-tight mb-10 md:mb-12">
           Ready to build the future
           <br className="hidden md:block" />
           <span className="inline md:hidden"> </span>
@@ -23,7 +23,7 @@ const CTA: React.FC = () => {
           
           {/* Partner Button */}
           <button
-            className="lg:w-[285.64px] lg:h-[66px] fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-300 transition-all"
+            className="lg:w-[285.64px] h-[66px] fish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-300 transition-all"
             onClick={() => router.push("/partner")}
           >
             Partner With Us
@@ -31,7 +31,7 @@ const CTA: React.FC = () => {
 
           {/* Consultation Button */}
           <button
-            className="lg:w-[285.64px] lg:h-[66px] notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-800 transition-all"
+            className="lg:w-[285.64px] h-[66px] notfish w-full md:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-[12px] font-semibold tracking-widest uppercase hover:bg-slate-800 transition-all"
             onClick={() => router.push("/consultation")}
           >
             Request a Consultation

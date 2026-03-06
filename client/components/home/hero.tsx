@@ -8,17 +8,18 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-visible
-                        pt-24 pb-16 md:pt-0 md:pb-0 ">
+                        pt-24 md:pt-0 md:pb-0 ">
 
       {/* LEFT GLOW */}
       <div
         className="
           absolute
-          -top-[30%] -left-[40%]
+          -top-[50%] -left-[70%]
           w-[140%] h-[90%]
+          
           md:-top-[30%] md:-left-[30%]
           md:w-[75%] md:h-[150%]
-          bg-[#01ADC6] rounded-full blur-[140px] md:blur-[140px] z-50 md:opacity-[30%]
+          bg-[#01ADC6] rounded-full blur-[140px] z-50 opacity-[30%]
         "
       />
 
@@ -56,14 +57,14 @@ const HeroSection: React.FC = () => {
           </div>
 
           {/* Mobile badge */}
-          <div className="md:hidden my-auto bg-[#E0F5F8] text-[#394353]
+          <div className="md:hidden my-auto bg-[#FFFFFF]/40
                           px-2 py-1 rounded-full text-[8px]
-                          font-bold tracking-[0.2em] uppercase w-54">
+                          font-bold border-white/60 border lg:backdrop-blur-[12px] tracking-[0.2em] uppercase w-54 whitespace-nowrap !text-[#0F172A]/80">
             AI-Driven Marine Biotechnology
           </div>
 
           {/* Heading */}
-          <h1 className="text-[30px] leading-[54px] md:text-[54px] lg:mt-8">
+          <h1 className="text-[30px] md:leading-[54px] md:text-[54px] lg:mt-8">
             Decoding{" "}
             <span className="font-italic">
               Marine Biology
@@ -79,22 +80,22 @@ const HeroSection: React.FC = () => {
           </h1>
 
           {/* Paragraph */}
-          <p className="para-style md:text-[16px] leading-relaxed md:text-inherit !text-[#03045E] text-justify">
+          <p className="text-[13px] md:text-[16px] md:leading-relaxed md:text-inherit !text-[#03045E] text-justify">
             Umami Bioworks is an AI-driven biotechnology company modeling marine biology at the cellular level to power next-generation solutions across food, health, and nutrition. Our platform connects Digital Cell Models to real-world outcomes that are faster, more predictable, and sustainably scalable.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-3 lg:mt-6 w-[900px] md:w-[1100px] relative">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-3 md:mt-6 w-auto md:w-[1100px] relative">
 
             <button
-              className="fish lg:w-[461.2px] lg:h-[66px] px-8 py-4 rounded-full text-[12px] font-semibold tracking-widest uppercase"
+              className="fish w-auto md:w-[461.2px] h-[66px] px-8 py-4 rounded-full text-[12px] font-semibold tracking-widest uppercase"
               onClick={() => router.push("/platform")}
             >
               + Explore the Alkemyst™ Platform
             </button>
 
             <button
-              className="notfish w-[285.64px] px-8 py-4 rounded-full text-[12px] font-semibold tracking-widest uppercase"
+              className="notfish md:w-[285.64px] h-[66px] px-8 py-4 rounded-full text-[12px] font-semibold tracking-widest uppercase"
               onClick={() => router.push("/partner")}
             >
               + Partner with Us
