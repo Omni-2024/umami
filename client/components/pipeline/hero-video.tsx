@@ -37,18 +37,18 @@ export default function HeroVideo({
         <div className="max-w-5xl text-white text-center md:-mt-30">
         
           {eyebrow && (
-  <div className="flex justify-center mb-2 text-center rounded-full border-2 border-white w-80 mx-auto">
-    <p className="text-[8px] tracking-widest uppercase rounded-full opacity-50 bg-[#FFFFFF] px-4 py-0.5 text-center inline-block ">
+  <div className="flex justify-center mb-2 text-center rounded-full  bg-[#FFFFFF]/40 border-white/60 border lg:backdrop-blur-[12px] lg:w-[429px] mx-auto">
+    <p className="text-[8px] tracking-widest uppercase rounded-full !text-[#03045E]  py-0.5 text-center inline-block lg:tracking-[4px] ">
       {eyebrow}
     </p>
   </div>
 )}
 
-          <h2 className="text-[40px] md:text-[64px] py-6 md-py-0 leading-tight">
+          <h2 className="text-[40px] lg:text-[64px] py-6 md-py-0 leading-[74px]">
   {/* Line 1 */}
   {title}{" "}
   <span className="font-italic">
-    The Ocean
+    The Ocean,
   </span>
 
   <br />
@@ -60,7 +60,7 @@ export default function HeroVideo({
   {title2}
 </h2>
 
-          <p className="max-w-sm mx-auto text-[16px] !text-[#033E8A] font-medium leading-relaxed">
+          <p className="lg:w-[386px] sm:max-w-sm mx-auto lg:text-[18px] !text-[#033E8A] font-regular leading-[28px]">
           We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty.
         </p>
         </div>

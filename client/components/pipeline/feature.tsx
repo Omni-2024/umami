@@ -12,30 +12,30 @@ export default function PipelineContent() {
           id={`pipeline-${data.key}`}
           className="relative py-6 md:py-10 px-4 md:px-20 bg-white z-10 scroll-mt-32"
         >
-          <div className="mx-auto grid max-w-5xl gap-10 md:gap-12 items-center md:grid-cols-2 transition-all duration-500 ease-out">
+          <div className="mx-auto grid max-w-5xl sm:gap-10 items-center md:grid-cols-2 transition-all duration-500 ease-out">
             
             {/* Text */}
             <div className="md:-mt-20">
-              <p className="mb-3 text-[10px] md:text-xs tracking-widest uppercase font-semibold text-yellow-500 leading-text">
+              <p className="mb-3 text-[10px] md:text-xs uppercase font-semibold !text-[#CD5A99] tracking-[6px] leading-text">
                 {data.eyebrow}
               </p>
 
-              <h2 className="text-xl sm:text-3xl md:text-4xl md:mb-10">
+              <h2 className="sm:text-3xl lg:text-[48px] font-light md:mb-10">
                 {data.title}{" "}
                 {data.highlight && (
                   <span className="font-italic">{data.highlight}</span>
                 )}
               </h2>
 
-              <div className="mt-4 md:mt-6 max-w-md space-y-4 text-[12px] md:text-[18px] leading-relaxed text-justify text-gray-600">
+              <div className="mt-4 md:mt-6 sm:max-w-md space-y-4 sm:text-[12px] lg:text-[18px] leading-[34px] text-justify !text-[#033E8A]">
                 {data.description.map((text, idx) => (
-                  <p key={idx}>{text}</p>
+                  <p className="!text-[#033E8A]" key={idx}>{text}</p>
                 ))}
               </div>
             </div>
 
             {/* Image */}
-            <div className="relative h-[350] sm:h-[320px] md:h-[550px] w-full overflow-hidden rounded-2xl">
+            <div className="relative h-[350] sm:h-[320px] md:h-[550px] lg:w-[512px] w-full overflow-hidden rounded-2xl">
               <Image
                 src={data.imageSrc}
                 alt={data.imageAlt}

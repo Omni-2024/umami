@@ -2,31 +2,31 @@ import React from "react";
 
 const ScienceImpactGrid = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white z-20">
       <div className="grid grid-cols-1 md:grid-cols-2">
 
         {/* Top Left: Text Content */}
         <div className="flex items-center justify-center 
-                        p-8 sm:p-10 md:p-16 lg:p-24 
+                        p-8 sm:p-10 lg:p-16 lg:p-24 
                         bg-white 
                         md:aspect-square">
-          <div className="max-w-md">
-            <h2 className="text-[30px] sm:text-[40px] md:text-[48px] mb-6 leading-tight">
+          <div className="lg:ml-24 lg:w-[476px] max-w-md">
+            <h2 className="text-[30px] sm:text-[40px] lg:text-[48px] mb-10 leading-tight">
               Science to <span className="font-italic">Impact</span>
             </h2>
 
             <div className="space-y-6 md:space-y-8 
-                            leading-relaxed 
-                            text-[14px] sm:text-[17px] md:text-[18px] 
-                            text-justify">
-              <p>
+                            leading-[33px] 
+                            text-[14px] sm:text-[17px] lg:text-[18px] 
+                            text-justify                            ">
+              <p className="!text-[#033E8A]">
                 Our team spans biotechnology, AI, marine science, and
                 product development united by a shared belief that
                 meaningful innovation happens when science can be
                 translated into real-world applications.
               </p>
 
-              <p>
+              <p className="!text-[#033E8A]">
                 We are a small, global team that values thoughtful debate,
                 intellectual honesty, and getting the details right. We move
                 fast when the data supports it, slow down when the
@@ -38,7 +38,7 @@ const ScienceImpactGrid = () => {
         </div>
 
         {/* Top Right Image */}
-        <div className="relative h-[320px] sm:h-[420px] md:h-auto md:aspect-square overflow-hidden">
+        <div className="relative h-[320px] sm:h-[420px] md:h-auto md:aspect-square overflow-hidden z-20">
           <img
             src="/people/impact1.jpg"
             alt="Scientists in lab having a video call"

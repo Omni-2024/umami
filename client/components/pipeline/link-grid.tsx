@@ -67,10 +67,12 @@ export default function PipelineSelector({ items }: SelectorProps) {
   return (
     <section ref={sectionRef} className="sticky top-0 z-50 md:-mt-40">
       <div
-        className={`relative py-6 md:py-10 px-4 md:px-20 bg-white transition-all duration-500 ease-in-out shadow-[0_-10px_40px_rgba(0,0,0,0.06)] ${
-          isStuck ? "rounded-none" : "md:rounded-t-[180px]"
-        }`}
-      >
+  className={`relative py-6 lg:py-20 px-4 md:px-20 bg-white transition-all duration-500 ease-in-out shadow-[0_-10px_40px_rgba(0,0,0,0.06)] ${
+    isStuck 
+      ? "rounded-none" 
+      : "md:rounded-t-[50%_120px]" // Use percentage for width and pixels for height for an elliptical curve
+  }`}
+>
         <div className="mx-auto max-w-8xl">
           
           {/* ✅ Mobile: 2 columns | Desktop unchanged */}
@@ -83,7 +85,7 @@ export default function PipelineSelector({ items }: SelectorProps) {
                 <button
                   key={item.key}
                   onClick={() => handleScroll(item.key)}
-                  className="relative text-[8px] md:text-[11px] tracking-[0.25em] uppercase font-medium transition-colors text-center md:w-[calc(33.33%-3.5rem)]"
+                  className="relative text-[8px] lg:text-[10px] tracking-[0.25em] uppercase font-bold transition-colors text-center md:w-[calc(33.33%-3.5rem)]"
                 >
                   <span
                     className={

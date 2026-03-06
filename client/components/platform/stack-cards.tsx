@@ -23,7 +23,7 @@ export default function IsometricCardStack() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="relative z-10 flex items-center justify-center overflow-hidden bg-[#E5F7F9] py-10">
+    <div className="relative z-10 flex items-center justify-center overflow-hidden bg-[#E5F7F9] py-20">
       <div className="max-w-5xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12">
 
         {/* --- LEFT SIDE: 3D STACKED CARDS --- */}
@@ -88,14 +88,14 @@ export default function IsometricCardStack() {
 
         {/* --- RIGHT SIDE: TEXT CONTENT --- */}
         <div className="flex-1 max-w-xl text-left space-y-6 mt-20 md:-mt-20 lg:-mt-10 w-full">
-          <h2 className="text-[30px] md:text-[44px] leading-tight md:leading-tight">
+          <h2 className="text-[30px] lg:text-[34px] leading-[44px] md:leading-tight lg:w-[376px]">
             A Computational{" "}
             <span className="font-italic">
                Representation of Living
             </span>{" "}
             Marine Cells
           </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[16px] font-medium leading-relaxed !text-[#033E8A] text-justify">
+          <p className="lg:w-[376px] text-[14px] sm:text-[16px] lg:text-[16px] font-medium leading-[24.2px] !text-[#033E8A] text-justify">
             We combine deep expertise in marine cell biology with large-scale computation to 
             build the world’s first seafood foundation model. By mapping biological traits to underlying 
             metabolic pathways and screening millions of scenarios in silico, ALKEMYST identifies optimal 

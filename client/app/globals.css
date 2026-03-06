@@ -166,14 +166,34 @@
   background-color: #0095C8;
   color: white;
 }
-.fish{
+/* .fish{
   background: linear-gradient(
     to left,
     #CD5A99,
     #0095C8
   );
   color: white;
+} */
+
+.fish {
+  background: linear-gradient(120deg, #0095C8, #CD5A99 , #0095C8);
+  background-size: 200% 200%;
+  color: white;
+  animation: fishGradient 8s ease-in-out infinite;
 }
+
+@keyframes fishGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .grayfish{
   background-color: #C7CDDC;
   color: #0F172A;
@@ -195,6 +215,13 @@
   border: 3px solid transparent;
   background: 
     linear-gradient(#E5F7F9, #E5F7F9) padding-box,
+    linear-gradient(90deg,  rgba(0, 149, 200, 0.5), rgba(205, 90, 153, 0.5)) border-box;
+}
+
+.border-neon-why {
+  border: 3px solid transparent;
+  background: 
+    linear-gradient(#ffffff, #E5F7F9) padding-box,
     linear-gradient(90deg,  rgba(0, 149, 200, 0.5), rgba(205, 90, 153, 0.5)) border-box;
 }
 
