@@ -40,18 +40,19 @@ const TeamSection = () => {
     <section className="bg-[#f0f7ff] py-20 px-6">
       <div className="max-w-6xl mx-auto md:text-center">
 
-        <span className="uppercase tracking-[0.3em] md-text-[10px] text-[8px] font-bold text-[#CD5A99] block mb-4 leading-tight">
+        <span className="uppercase tracking-[6px] lg-text-[12px] sm:text-[8px] font-bold !text-[#CD5A99] block mb-2 leading-tight">
           Human Intelligence
         </span>
 
-        <h2 className="text-[30px] sm:text-[64px] mb-6">
+        <h2 className="sm:text-[30px] lg:text-[64px] mb-6">
           Our <span className="font-italic">Team</span>
         </h2>
 
-        <p className="max-w-4xl mx-auto text-sm md:text-base leading-loose mb-16 md:mb-20 opacity-80 md:text-center text-justify">
-          Our team spans biotechnology, AI, marine science, and product development united by a shared belief
-          that meaningful innovation happens when science can be translated into real-world applications.
-          We are a small, global team that values thoughtful debate, intellectual honesty, and getting the details right.
+        <p className="lg:max-w-[1100px] mx-auto text-sm md:text-base leading-loose mb-16 md:mb-20 md:text-center text-justify">
+          Our team spans biotechnology, AI, marine science, and product development  united by a shared belief that meaningful innovation 
+          happens when science can be translated into real-world applications.  We are a small, global team that values thoughtful debate, 
+          intellectual honesty, and getting the details right. We move fast when the data supports it, slow down when the science demands it, 
+          and never lose sight of why the work matters. 
         </p>
 
         {/* ================= MOBILE CAROUSEL WITH ARROWS ================= */}
@@ -124,7 +125,8 @@ const TeamSection = () => {
         <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col items-center group">
-              <div className="w-48 h-48 rounded-full border-neon bg-white flex items-center justify-center mb-6 transition-all duration-300 group-hover:shadow-xl group-hover:border-blue-400">
+              <div className="w-48 h-48 rounded-full border-neon bg-white flex items-center justify-center mb-6 transition-all 
+              duration-300 group-hover:shadow-xl group-hover:border-blue-400">
                 <svg
                   className="w-10 h-10 text-blue-900 opacity-60"
                   fill="none"
@@ -140,8 +142,8 @@ const TeamSection = () => {
                 </svg>
               </div>
 
-              <h3 className="text-lg font-bold mb-1">{member.name}</h3>
-              <p className="text-sm text-blue-800 font-medium">{member.role}</p>
+              <h3 className="text-[16px] font-bold mb-1">{member.name}</h3>
+              <p className="text-[16px] !text-[#033E8A] font-regular">{member.role}</p>
             </div>
           ))}
         </div>

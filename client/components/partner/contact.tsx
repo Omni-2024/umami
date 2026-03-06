@@ -7,11 +7,11 @@ const ContactSection = () => {
       
       {/* Left Side */}
       <div className="w-full lg:w-1/2">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#0A192F] tracking-tight text-left">
-          Let’s <span className="italic">Connect</span>
+        <h2 className="text-3xl sm:text-4xl lg:text-[54px] font-light text-[#0A192F] tracking-tight text-left">
+          Let’s <span className="font-italic">Connect</span>
         </h2>
 
-        <p className="mt-5 text-slate-600 text-base sm:text-lg leading-relaxed max-w-md mx-auto lg:mx-0 text-left">
+        <p className="mt-5 font-regular text-base lg:text-[18px] leading-[28px] max-w-md mx-auto lg:mx-0 text-left">
           If you have any questions or inquiries, connect with us through this form
         </p>
 
@@ -19,40 +19,40 @@ const ContactSection = () => {
 
           {/* Email */}
           <div className="flex items-start sm:items-center group cursor-pointer gap-4 sm:gap-6">
-            <div className="p-3 sm:p-4 bg-[#F0F7FF] rounded-xl">
-              <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#0A192F]" />
+            <div className="p-3 sm:p-4 rounded-xl">
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6 !text[#03045E]" />
             </div>
 
             <div className="flex-1 border-b border-slate-100 pb-2">
-              <p className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#0A192F] uppercase">
+              <p className="lg:text-[12px] sm:text-xs font-bold tracking-[3.6px] uppercase">
                 Email Us
               </p>
-              <p className="text-xs sm:text-sm font-medium text-slate-500 tracking-wider break-all">
+              <p className="lg:text-[10px] sm:text-sm font-medium !text-[#033E8A] tracking-[3.6px] break-all">
                 partnerships@umamibioworks.com
               </p>
             </div>
 
-            <div className="border border-slate-900 rounded-full p-1 group-hover:bg-slate-900 group-hover:text-white transition-colors">
-              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            <div className="border-2 border-[#03045E] rounded-full p-1 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+              <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text" />
             </div>
           </div>
 
           {/* Address */}
           <div className="flex items-start sm:items-center group cursor-pointer gap-4 sm:gap-6">
-            <div className="p-3 sm:p-4 bg-[#F0F7FF] rounded-xl">
-              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#0A192F]" />
+            <div className="p-3 sm:p-4 rounded-xl">
+              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 !text-[#03045E]" />
             </div>
 
             <div className="flex-1 border-b border-slate-100 pb-2">
-              <p className="text-[10px] sm:text-xs font-bold tracking-[0.2em] text-[#0A192F] uppercase">
+              <p className="lg:text-[12px] sm:text-xs font-bold tracking-[3.6px] text-[#0A192F] uppercase">
                 Address
               </p>
-              <p className="text-xs sm:text-sm font-medium text-slate-500 tracking-wider leading-relaxed">
+              <p className="lg:text-[10px] sm:text-xs font-medium !text-[#033E8A] tracking-[3.6px] leading-relaxed">
                 89 Science Park Dr, #04-22, Singapore 118261
               </p>
             </div>
 
-            <div className="border border-slate-900 rounded-full p-1 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+            <div className="border-2 border-[#03045E] rounded-full p-1 group-hover:bg-slate-900 group-hover:text-white transition-colors">
               <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
           </div>

@@ -40,7 +40,7 @@ const HeroOverlay: React.FC = () => {
             h-[100%] md:h-[100%] 
             w-auto 
             object-contain 
-            md:transform md:-translate-x-10
+            md:transform lg:translate-x-20
           "
         />
       </div>
@@ -144,8 +144,8 @@ const HeroOverlay: React.FC = () => {
       >
         <h1
           className="
-            text-[30px] sm:text-[48px] md:text-[64px]
-            leading-snug md:leading-tight
+            text-[30px] sm:text-[48px] lg:text-[64px]
+            leading-snug lg:leading-[64px]
           "
         >
           Blending Scientific <span className="font-italic">Rigor</span>
