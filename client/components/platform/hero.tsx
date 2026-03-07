@@ -13,21 +13,21 @@ const HeroOverlay: React.FC = () => {
 </div>
 
       {/* Heading */}
-      <h1 className="lg:text-[64px] sm:text-[56px] leading-[74px]">
+      <h1 className="lg:text-[64px] text-[30px] lg:leading-[74px]">
         AI-Native{" "}
         <span className="font-italic">
           Infrastructure
         </span>
         <br />
         <span className="font-italic">
-          for{""}
+          for {""}
         </span>
         Marine Biology
       </h1>
 
       {/* CTA */}
       <div className="mt-12">
-        <button className="lg:w-[361px] lg:h-[66px] rounded-full notfish px-16 py-4 text-[12px] font-semibold tracking-widest uppercase hover:opacity-90 transition">
+        <button className="lg:w-[361px] h-[66px] rounded-full notfish px-16 py-4 text-[12px] font-semibold tracking-widest uppercase hover:opacity-90 transition">
           Explore More
         </button>
       </div>

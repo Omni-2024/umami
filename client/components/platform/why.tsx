@@ -26,7 +26,7 @@ const WhyPossibleSection: React.FC = () => {
           <span className="font-italic">Today?</span>
         </h2>
 
-        <p className="mt-4 lg:my-4 text-sm md:text-[18px] lg:w-[789px] !text-[#033E8A] font-regular leading-[34px] max-w-4xl mx-auto text-justify md:text-center">
+        <p className="mt-4 lg:my-4 text-[13px] lg:text-[18px] lg:w-[789px] !text-[#033E8A] font-regular lg:leading-[34px] max-w-4xl mx-auto text-justify md:text-center">
           “ALKEMYST computationally models the dynamic biological state of marine
           cells. Marine biology is dynamic in nature and needs special insight
           to increase foundational understanding. By integrating molecular,
@@ -42,7 +42,7 @@ const WhyPossibleSection: React.FC = () => {
             return (
               <div
   key={index}
-  className="relative rounded-3xl lg:px-10 sm:px-8 py-6 md:py-12 text-center shadow-sm border-neon-why lg:h-[282px]"
+  className="relative rounded-3xl lg:px-10 px-8 py-8 lg:py-12 text-center shadow-sm border-neon-why lg:h-[282px]"
 >
   {/* ICON BADGE */}
   <div className="absolute -top-7 left-1/2 -translate-x-1/2">
