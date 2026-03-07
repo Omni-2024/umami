@@ -18,7 +18,7 @@ export default function HeroVideo({
   subtitle,
 }: HeroVideoProps) {
   return (
-    <section className="relative h-[100vh] w-full overflow-hidden relative py-28 px-20 z-10">
+    <section className="relative h-[100vh] w-full overflow-hidden relative py-28 px-6 lg:px-20 z-10">
       {/* Background video */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -30,7 +30,7 @@ export default function HeroVideo({
       />
 
       {/* 5% blur overlay */}
-      <div className="absolute inset-0 bg-[#B1D4D8]/30 " />
+      <div className="absolute inset-0 bg-[#B1D4D8]/50 lg:bg-[#B1D4D8]/30 " />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
@@ -44,7 +44,7 @@ export default function HeroVideo({
   </div>
 )}
 
-          <h2 className="text-[40px] lg:text-[64px] py-6 md-py-0 leading-[74px]">
+          <h2 className="text-[30px] lg:text-[64px] py-6 md-py-0 md:leading-[74px]">
   {/* Line 1 */}
   {title}{" "}
   <span className="font-italic">
@@ -60,7 +60,7 @@ export default function HeroVideo({
   {title2}
 </h2>
 
-          <p className="lg:w-[386px] sm:max-w-sm mx-auto lg:text-[18px] !text-[#033E8A] font-regular leading-[28px]">
+          <p className="lg:w-[386px] w-auto sm:max-w-sm mx-auto text-[13px] lg:text-[18px] !text-[#033E8A] font-regular md:leading-[28px]">
           We model the ocean’s biology at the cellular level to build a resilient, scalable future for food, health and beauty.
         </p>
         </div>
