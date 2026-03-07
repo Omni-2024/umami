@@ -11,13 +11,13 @@ const ScienceImpactGrid = () => {
                         bg-white 
                         md:aspect-square">
           <div className="lg:ml-24 lg:w-[476px] max-w-md">
-            <h2 className="text-[30px] sm:text-[40px] lg:text-[48px] mb-10 leading-tight">
+            <h2 className="text-[30px] sm:text-[40px] lg:text-[48px] mb-4 lg:mb-10 leading-tight">
               Science to <span className="font-italic">Impact</span>
             </h2>
 
             <div className="space-y-6 md:space-y-8 
-                            leading-[33px] 
-                            text-[14px] sm:text-[17px] lg:text-[18px] 
+                            lg:leading-[33px] 
+                            text-[13px] sm:text-[17px] lg:text-[18px] 
                             text-justify                            ">
               <p className="!text-[#033E8A]">
                 Our team spans biotechnology, AI, marine science, and
