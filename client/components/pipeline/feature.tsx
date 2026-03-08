@@ -15,7 +15,7 @@ export default function PipelineContent() {
           <div className="mx-auto grid max-w-5xl sm:gap-10 items-center md:grid-cols-2 transition-all duration-500 ease-out">
             
             {/* Text */}
-            <div className="md:-mt-20">
+            <div className="mt-4 md:-mt-20 ">
               <p className="mb-3 text-[10px] md:text-xs uppercase font-semibold !text-[#CD5A99] tracking-[6px] leading-text">
                 {data.eyebrow}
               </p>
@@ -27,7 +27,7 @@ export default function PipelineContent() {
                 )}
               </h2>
 
-              <div className="mt-4 md:mt-6 sm:max-w-md space-y-4 sm:text-[12px] lg:text-[18px] leading-[34px] text-justify !text-[#033E8A]">
+              <div className="my-6 md:mt-6 sm:max-w-md space-y-4 text-[13px] lg:text-[18px] lg:leading-[34px] text-justify !text-[#033E8A]">
                 {data.description.map((text, idx) => (
                   <p className="!text-[#033E8A]" key={idx}>{text}</p>
                 ))}

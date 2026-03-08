@@ -1,7 +1,6 @@
 "use client";
 
-import { h1 } from "framer-motion/client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 // --- Types ---
 interface DataItem {
@@ -24,7 +23,7 @@ const seafoodSolutions: DataItem[] = [
   { label: "Biomarkers for growth, flavour" },
   { label: "Improved Feed Utilization" },
   { label: "Biomarkers for disease resistance" },
-  { label: "Higher Biomass Yield"  },
+  { label: "Higher Biomass Yield" },
   { label: "Faster Growth" },
 ];
 
@@ -53,6 +52,44 @@ const DotIcon: React.FC = () => (
   </div>
 );
 
+/* ------------------ MOBILE PANEL ------------------ */
+
+function MobilePanel({
+  title,
+  items,
+  align = "left",
+}: {
+  title: string;
+  items: DataItem[];
+  align?: "left" | "right";
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className={`flex flex-col ${align === "right" ? "items-end" : "items-start"}`}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="text-[12px] px-4 py-2 rounded-full bg-[#29b8d4]/10 border border-[#29b8d4]/40 text-[#033E8A] font-semibold backdrop-blur-md"
+      >
+        {title}
+      </button>
+
+      {open && (
+        <div className="mt-3 space-y-2 bg-white/90 backdrop-blur-md shadow-lg rounded-xl px-4 py-3">
+          {items.map((item, i) => (
+            <div key={i} className="flex items-center gap-2 text-[11px] text-[#4a6070]">
+              <div className="w-2 h-2 rounded-full bg-[#29b8d4]" />
+              {item.label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ------------------ CELL CANVAS ------------------ */
+
 function CellCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animRef = useRef<number | null>(null);
@@ -63,8 +100,10 @@ function CellCanvas() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const W = canvas.width, H = canvas.height;
-    const cx = W / 2, cy = H / 2;
+    const W = canvas.width,
+      H = canvas.height;
+    const cx = W / 2,
+      cy = H / 2;
 
     const particles = Array.from({ length: 120 }, () => ({
       bx: (Math.random() - 0.5) * 110,
@@ -76,8 +115,10 @@ function CellCanvas() {
     }));
 
     let t = 0;
+
     const draw = () => {
       ctx.clearRect(0, 0, W, H);
+
       [[115, 0.1], [88, 0.16], [68, 0.28]].forEach(([r, op]) => {
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -102,108 +143,128 @@ function CellCanvas() {
         ctx.fillStyle = c;
         ctx.fill();
       };
+
       drawOrbit(115, 0.4, 5.5, "#64d3f8");
       drawOrbit(88, -0.6, 4.5, "#64f5e1");
 
       t += 0.01;
       animRef.current = requestAnimationFrame(draw);
     };
+
     draw();
-    return () => { if (animRef.current) cancelAnimationFrame(animRef.current); };
+
+    return () => {
+      if (animRef.current) cancelAnimationFrame(animRef.current);
+    };
   }, []);
 
   return <canvas ref={canvasRef} width={260} height={260} />;
 }
 
+/* ------------------ MAIN COMPONENT ------------------ */
+
 export default function MarineComputational() {
   return (
     <section className="relative w-full max-w-7xl mx-auto py-24 px-6 overflow-hidden bg-white">
+      
       {/* HEADER */}
       <div className="text-left md:text-center">
-        <h2 className="text-[30px] lg:text-[34px] leading-tight md:leading-tight">
+        <h2 className="text-[30px] lg:text-[34px] leading-tight">
           A Computational Representation <br />
           <span className="font-italic">of Living Marine Cells</span>
         </h2>
       </div>
 
       <div className="relative flex justify-center items-center min-h-[600px] -mt-28 lg:mt-0">
+
+        {/* CELL CENTER */}
         <div className="relative z-10 scale-110">
 
-  {/* Glow layer */}
-  <div
-    className="absolute pointer-events-none"
-    style={{
-      width: "140px",
-      height: "140px",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      borderRadius: "9999px",
-      zIndex: 0,
-      background:
-        "radial-gradient(circle, rgba(120,220,255,0.9) 0%, rgba(120,220,255,0.25) 40%, rgba(120,220,255,0.08) 80%, transparent 15%)",
-      filter: "blur(10px)",
-    }}
-  />
+          {/* Glow */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              width: "140px",
+              height: "140px",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              borderRadius: "9999px",
+              zIndex: 0,
+              background:
+                "radial-gradient(circle, rgba(120,220,255,0.9) 0%, rgba(120,220,255,0.25) 40%, rgba(120,220,255,0.08) 80%, transparent 15%)",
+              filter: "blur(10px)",
+            }}
+          />
 
-  {/* Cell image */}
-  <img
-    src="/platform/anicell.png"
-    alt="Cell glow"
-    className="absolute pointer-events-none select-none rounded-full"
-    style={{
-      width: "106.39px",
-      height: "106.39px",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      zIndex: 1,
-      filter: "brightness(1.1) saturate(1.1)",
-    }}
-  />
+          {/* Cell image */}
+          <img
+            src="/platform/anicell.png"
+            alt="Cell glow"
+            className="absolute pointer-events-none select-none rounded-full"
+            style={{
+              width: "106.39px",
+              height: "106.39px",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 1,
+              filter: "brightness(1.1) saturate(1.1)",
+            }}
+          />
 
-  {/* Canvas animation */}
-  <div className="relative z-10">
-    <CellCanvas />
+          <div className="relative z-10">
+            <CellCanvas />
+          </div>
+        </div>
+
+        {/* MOBILE PANELS */}
+        {/* MOBILE PANELS */}
+<div className="md:hidden absolute inset-0 z-30 flex items-center justify-between px-4 pointer-events-none">
+
+  <div className="pointer-events-auto">
+    <MobilePanel title="Data Types" items={dataTypes} />
+  </div>
+
+  <div className="pointer-events-auto">
+    <MobilePanel title="Solutions" items={seafoodSolutions} align="right" />
   </div>
 
 </div>
 
+
         {/* DESKTOP CURVED LABELS */}
-        {/* DESKTOP CURVED LABELS */}
-<div className="hidden md:block absolute inset-0 pointer-events-none">
+        <div className="hidden md:block absolute inset-0 pointer-events-none">
 
-  {/* LEFT TITLE */}
-  <div className="absolute lg:left-50 lg:top-[10%] text-left">
-    <h3 className="lg:text-[26px] font-semibold text-[#4a6070] tracking-wide">
-      Data Types
-    </h3>
-  </div>
+          {/* LEFT TITLE */}
+          <div className="absolute lg:left-50 lg:top-[10%] text-left">
+            <h3 className="lg:text-[26px] font-semibold text-[#4a6070] tracking-wide">
+              Data Types
+            </h3>
+          </div>
 
-  {/* RIGHT TITLE */}
-  <div className="absolute lg:right-36 lg:top-[10%] text-right">
-    <h3 className="lg:text-[26px] font-semibold text-[#4a6070] tracking-wide">
-      Seafood Solutions
-    </h3>
-  </div>
+          {/* RIGHT TITLE */}
+          <div className="absolute lg:right-36 lg:top-[10%] text-right">
+            <h3 className="lg:text-[26px] font-semibold text-[#4a6070] tracking-wide">
+              Seafood Solutions
+            </h3>
+          </div>
 
-          
-          {/* LEFT SIDE: Text ends at the Dot */}
+          {/* LEFT SIDE LABELS */}
           {dataTypes.map((item, i) => {
             const angle = 145 + (i * 70) / (dataTypes.length - 1);
+
             return (
-            
               <div
-                key={`left-${i}`}
+                key={i}
                 style={{
                   position: "absolute",
                   top: "50%",
                   left: "50%",
                   width: "450px",
-                  // Rotate from center, push out by 240px
                   transform: `rotate(${angle}deg) translateX(240px) rotate(-${angle}deg)`,
                   transformOrigin: "0 0",
-                  marginLeft: "-450px", // Pushes the container to the left of the center point
+                  marginLeft: "-450px",
                 }}
                 className="flex items-center justify-end gap-4"
               >
@@ -215,41 +276,40 @@ export default function MarineComputational() {
             );
           })}
 
-          {/* RIGHT SIDE: Dot starts at radius, text flows right */}
+          {/* RIGHT SIDE LABELS */}
           {seafoodSolutions.map((item, i) => {
             const angle = 325 + (i * 70) / (dataTypes.length - 1);
-  return (
-    <div
-      key={`left-${i}`}
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        width: "450px",
-        // Rotate from center, push out by 240px
-        transform: `rotate(${angle}deg) translateX(240px) rotate(-${angle}deg)`,
-        transformOrigin: "0 0",
-        /* FIX: Removed the negative marginLeft. 
-           The container now starts at the 240px radius point and flows right.
-        */
-        marginLeft: "0px", 
-      }}
-      className="flex items-center justify-start gap-4"
-    >
-      {/* Icon first, then Text */}
-      <DotIcon />
-      <span className="text-[13px] font-medium text-[#4a6070] text-left whitespace-nowrap">
-        {item.label}
-      </span>
-    </div>
-  );
+
+            return (
+              <div
+                key={i}
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  width: "450px",
+                  transform: `rotate(${angle}deg) translateX(240px) rotate(-${angle}deg)`,
+                  transformOrigin: "0 0",
+                }}
+                className="flex items-center justify-start gap-4"
+              >
+                <DotIcon />
+                <span className="text-[13px] font-medium text-[#4a6070] text-left whitespace-nowrap">
+                  {item.label}
+                </span>
+              </div>
+            );
           })}
         </div>
       </div>
 
+      {/* DESCRIPTION */}
       <div className="max-w-3xl mx-auto text-justify md:text-center -mt-26 lg:-mt-16">
-        <p className="text-lg lg:text-[16px] font-regular !text-[#033E8A] leading-[24.2px]">
-ALKEMYST™ is an AI foundation model designed to understand marine biology at the cellular level. By powering Digital Marine Cells, the platform captures complex biological behavior in silico, enabling prediction, optimization, and extension across species        </p>
+        <p className="text-[13px] lg:text-[16px] !text-[#033E8A] lg:leading-[24.2px]">
+          ALKEMYST™ is an AI foundation model designed to understand marine biology at the cellular level.
+          By powering Digital Marine Cells, the platform captures complex biological behavior in silico,
+          enabling prediction, optimization, and extension across species.
+        </p>
       </div>
     </section>
   );

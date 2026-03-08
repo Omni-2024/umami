@@ -13,17 +13,21 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="absolute top-0 left-0 w-full lg:h-[112px] z-40">
-      <div className="flex items-center justify-between px-6 md:px-18 py-[30px]">
+    <nav className="fixed md:absolute top-0 left-0 w-full lg:h-[112px] z-[100] bg-white md:bg-transparent">
+      <div className="flex items-center justify-between px-4 sm:px-6 md:px-18 py-4 md:py-[30px]">
 
         {/* Logo */}
         <div className="cursor-pointer">
           <Link href="/">
-            <img src="/logo-b.png" alt="Logo" className="lg:w-[167px] lg:h-[50px] w-24 md:w-30" />
+            <img
+              src="/logo-b.png"
+              alt="Logo"
+              className="w-24 sm:w-28 md:w-30 lg:w-[167px] lg:h-[50px]"
+            />
           </Link>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu (UNCHANGED) */}
         <div className="hidden md:flex items-center gap-16">
           <ul className="flex items-center gap-20 font-bold text-[10px] tracking-[0.15em]">
             {navItems.map((item) => (
@@ -49,19 +53,19 @@ const Navbar: React.FC = () => {
           className="md:hidden flex flex-col gap-1"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span className="w-6 h-[2px] bg-white"></span>
-          <span className="w-6 h-[2px] bg-white"></span>
-          <span className="w-6 h-[2px] bg-white"></span>
+          <span className="w-6 h-[2px] bg-black"></span>
+          <span className="w-6 h-[2px] bg-black"></span>
+          <span className="w-6 h-[2px] bg-black"></span>
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white text-[#0F172A] w-full px-6 py-6 flex flex-col gap-6 shadow-xl">
+        <div className="md:hidden bg-white/10 text-[#0F172A] w-full px-6 py-6 flex flex-col gap-6 shadow-xl">
           {navItems.map((item) => (
             <Link key={item.label} href={item.href}>
               <div
-                onClick={() => setIsOpen(false)} // close menu when clicked
+                onClick={() => setIsOpen(false)}
                 className="font-bold text-[12px] tracking-[0.15em] cursor-pointer"
               >
                 {item.label}
@@ -70,7 +74,7 @@ const Navbar: React.FC = () => {
           ))}
 
           <Link href="/partner">
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="notfish px-6 py-3 rounded-full text-[10px] font-bold tracking-[0.1em] mt-4"
             >

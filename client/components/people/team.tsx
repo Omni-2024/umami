@@ -40,15 +40,15 @@ const TeamSection = () => {
     <section className="bg-[#f0f7ff] py-20 px-6">
       <div className="max-w-6xl mx-auto md:text-center">
 
-        <span className="uppercase tracking-[6px] lg-text-[12px] sm:text-[8px] font-bold !text-[#CD5A99] block mb-2 leading-tight">
+        <span className="uppercase tracking-[6px] lg-text-[12px] text-[8px] font-bold !text-[#CD5A99] block mb-2 leading-tight">
           Human Intelligence
         </span>
 
-        <h2 className="sm:text-[30px] lg:text-[64px] mb-6">
+        <h2 className="text-[30px] lg:text-[64px] mb-4 lg:mb-6">
           Our <span className="font-italic">Team</span>
         </h2>
 
-        <p className="lg:max-w-[1100px] mx-auto text-sm md:text-base leading-loose mb-16 md:mb-20 md:text-center text-justify">
+        <p className="lg:max-w-[1100px] mx-auto text-[13px] md:text-base md:leading-loose mb-16 md:mb-20 md:text-center text-justify">
           Our team spans biotechnology, AI, marine science, and product development  united by a shared belief that meaningful innovation 
           happens when science can be translated into real-world applications.  We are a small, global team that values thoughtful debate, 
           intellectual honesty, and getting the details right. We move fast when the data supports it, slow down when the science demands it, 

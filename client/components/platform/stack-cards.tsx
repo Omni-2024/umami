@@ -28,17 +28,21 @@ export default function IsometricCardStack() {
 
         {/* --- LEFT SIDE: 3D STACKED CARDS --- */}
         <div 
-          className="relative flex-1 flex items-center justify-center mt-120 lg:mt-90 w-full"
-          style={{ perspective: "3600px", height: "300px" }}
+          className="relative flex-1 flex items-center justify-center mt-70 lg:mt-90 w-full"
+          style={{ perspective: "3600px", height: "220px" }}   // smaller mobile height
         >
           <div 
-            className="relative "
+            className="relative"
             style={{ transformStyle: "preserve-3d", transform: "rotateX(55deg) rotateZ(-40deg) rotateY(0deg)" }}
           >
             {layers.map((layer, i) => {
               const isHov = hovered === i;
               const indexFromTop = i;
-              const gapPerLayer = 65;
+
+              const gapPerLayer = typeof window !== "undefined" && window.innerWidth < 768 ? 45 : 65;
+
+              const cardWidth = typeof window !== "undefined" && window.innerWidth < 768 ? 230 : 300;
+              const cardHeight = typeof window !== "undefined" && window.innerWidth < 768 ? 140 : 180;
 
               return (
                 <div
@@ -47,10 +51,10 @@ export default function IsometricCardStack() {
                   onMouseLeave={() => setHovered(null)}
                   className="absolute transition-all duration-500 ease-out cursor-pointer"
                   style={{
-                    width: "300px",
-                    height: "180px",
-                    left: "-145px",
-                    top: "-90px",
+                    width: `${cardWidth}px`,
+                    height: `${cardHeight}px`,
+                    left: `${-cardWidth/2}px`,
+                    top: `${-cardHeight/2}px`,
                     transform: `translateZ(${(layers.length - 1 - indexFromTop) * gapPerLayer}px) ${isHov ? 'translateZ(25px)' : ''}`,
                     backgroundColor: layer.color,
                     borderRadius: "12px",
@@ -60,17 +64,17 @@ export default function IsometricCardStack() {
                     display: "flex",
                     alignItems: "flex-end",
                     justifyContent: "center",
-                    padding: "24px",
+                    padding: "20px",
                     zIndex: layers.length - i,
                     textAlign: "center",
                     position: "absolute"
                   }}
                 >
                   <div className="flex flex-col items-center">
-                    <h3 className="text-[11px] font-black tracking-widest text-white uppercase leading-tight drop-shadow-sm">
+                    <h3 className="text-[10px] md:text-[11px] font-black tracking-widest text-white uppercase leading-tight drop-shadow-sm">
                       {layer.label}
                     </h3>
-                    <p className="text-[10px] font-bold text-white/70 mt-1">
+                    <p className="text-[9px] md:text-[10px] font-bold text-white/70 mt-1">
                       {layer.size}
                     </p>
                   </div>
@@ -88,18 +92,19 @@ export default function IsometricCardStack() {
 
         {/* --- RIGHT SIDE: TEXT CONTENT --- */}
         <div className="flex-1 max-w-xl text-left space-y-6 mt-20 md:-mt-20 lg:-mt-10 w-full">
-          <h2 className="text-[30px] lg:text-[34px] leading-[44px] md:leading-tight lg:w-[376px]">
+          <h2 className="text-[30px] lg:text-[34px] leading-[34px] lg:leading-[44px] md:leading-tight lg:w-[376px]">
             A Computational{" "}
             <span className="font-italic">
                Representation of Living
             </span>{" "}
             Marine Cells
           </h2>
-          <p className="lg:w-[376px] text-[14px] sm:text-[16px] lg:text-[16px] font-medium leading-[24.2px] !text-[#033E8A] text-justify">
-            We combine deep expertise in marine cell biology with large-scale computation to 
+
+          <p className="lg:w-[376px] text-[13px] lg:text-[16px] lg:text-[16px] font-medium md:leading-[24.2px] !text-[#033E8A] text-justify">
+            We combine deep expertise in marine cell biology with large-scale computation to 
             build the world’s first seafood foundation model. By mapping biological traits to underlying 
-            metabolic pathways and screening millions of scenarios in silico, ALKEMYST identifies optimal 
-            parameters for real-world performance before physical trials begin. 
+            metabolic pathways and screening millions of scenarios in silico, ALKEMYST identifies optimal 
+            parameters for real-world performance before physical trials begin.
           </p>
         </div>
 

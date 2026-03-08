@@ -88,8 +88,8 @@ const HeroOverlay: React.FC = () => {
         
         <h1
           className="
-          sm:text-3xl md:text-5xl lg:text-[64px] 
-          leading-[70px]
+          text-[30px] md:text-5xl lg:text-[64px] 
+          lg:leading-[70px]
           font-light
           text-[#0A192F]
           "
@@ -102,10 +102,10 @@ const HeroOverlay: React.FC = () => {
         <p
           className="
           mt-6 sm:mt-8 md:mt-10
-          max-w-md sm:max-w-2xl
+          max-w-xs lg:max-w-2xl
           mx-auto
- [         text-sm sm:text-base lg:text-[18px]
-          leading-[28px]
+ [         text-[13px] sm:text-base lg:text-[18px]
+          lg:leading-[28px]
           md:px-0 px-8
           "
         >
