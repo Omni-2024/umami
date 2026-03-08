@@ -177,7 +177,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="mt-10 md:mt-10 pt-4 md:pt-6 border-t border-[#03045E]/50 flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center text-[9px] md:text-[10px] font-bold tracking-widest uppercase opacity-70 text-center md:text-left">
-          <span>Site by Maven Creative</span>
+          <span>Site by Mimic Creations</span>
           <span>Copyright ©2026 Umami All Rights Reserved</span>
           <span className="cursor-pointer">Privacy Policy</span>
         </div>
